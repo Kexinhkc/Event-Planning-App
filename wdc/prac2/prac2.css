@@ -3,19 +3,6 @@ p {
     font-family :'serif';
 }
 
-.bp {
-    color:darkblue;
-    background-color:pink;
-}
-
-a[href] {
-    color : darkgreen ;
-}
-
-.grey {
-    color : grey;
-}
-
 h1 {
     font-family : 'sans-serif';
 }
@@ -28,6 +15,24 @@ pre {
     font-family: monospace;
 
 }
+
+a[href] {
+    color : darkgreen ;
+}
+
+.bp {
+    color:darkblue;
+    background-color:pink;
+}
+
+.grey {
+    color : grey;
+}
+
+.blue{
+    color:blue;
+}
+
 
 #content {
     background-color:white;
