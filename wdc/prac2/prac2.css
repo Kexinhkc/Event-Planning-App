@@ -43,10 +43,10 @@ a[href] {
 }
 
 .bluebackground{
-    background-color:DCF5F5;
-    background-image: url("cross.png");
+    background-color: "DCF5F5";
+
 }
 
-#content {
+ #content {
     background-color: white;
 }
