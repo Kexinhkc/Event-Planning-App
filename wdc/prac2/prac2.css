@@ -2,6 +2,6 @@ p {
     font-family :'serif';
 }
 
-a {
+a[href] {
     color : darkgreen ;
 }
