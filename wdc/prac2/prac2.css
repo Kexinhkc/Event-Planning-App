@@ -5,3 +5,7 @@ p {
 a[href] {
     color : darkgreen ;
 }
+
+.grey {
+    color : grey;
+}
