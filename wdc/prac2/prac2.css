@@ -42,6 +42,9 @@ a[href] {
     font-family:cursive;
 }
 
+.bluebackground{
+    background-color:DCF5F5;
+}
 #content {
     background-color:white;
 }
