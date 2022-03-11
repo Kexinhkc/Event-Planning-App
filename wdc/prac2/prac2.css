@@ -44,11 +44,12 @@ a[href] {
 
 .bluebackground{
     background-color: #DCF5F5;
+    height: 300px;
 
 }
 
  #content {
     background-color: white;
-    height: 250px;
+    height: 240px;
     width: 800px;
 }
