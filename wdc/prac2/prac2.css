@@ -22,6 +22,7 @@ a[href] {
 
 body{
     background-color: #DCF5F5;
+    background-image: url("cross.png");
 }
 
 .bp {
