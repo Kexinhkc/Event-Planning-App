@@ -49,4 +49,6 @@ a[href] {
 
  #content {
     background-color: white;
+    height: 100px;
+    width: 50%;
 }
