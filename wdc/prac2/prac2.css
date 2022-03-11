@@ -33,8 +33,13 @@ a[href] {
     color:blue;
 }
 
-.italic{
-    font-style:italic;
+.fancy{
+    font-family:cursive;
+}
+
+.bf {
+    color:blue;
+    font-family:cursive;
 }
 
 #content {
