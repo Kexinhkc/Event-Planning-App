@@ -16,11 +16,11 @@ a[href] {
 }
 
 h2 {
-    align: left;
+
     font-family:'Sans Serif';
 }
 
 pre {
     font-family: monospace;
-    
+    font-size: normal;
 }
