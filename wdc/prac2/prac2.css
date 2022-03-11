@@ -33,6 +33,9 @@ a[href] {
     color:blue;
 }
 
+.italic{
+    font-style:italic;
+}
 
 #content {
     background-color:white;
