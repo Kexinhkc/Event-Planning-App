@@ -20,6 +20,10 @@ a[href] {
     color : darkgreen ;
 }
 
+body{
+    background-color: #DCF5F5;
+}
+
 .bp {
     color:darkblue;
     background-color:pink;
@@ -42,12 +46,7 @@ a[href] {
     font-family:cursive;
 }
 
-.bluebackground{
-    background-color: #DCF5F5;
-    height: 300px;
 
-
-}
 
  #content {
     padding: 0px;
