@@ -25,6 +25,10 @@ body{
     background-image: url("cross.png");
 }
 
+hr{
+    border-color:#CFDFE4;
+}
+
 .bp {
     color:darkblue;
     background-color:pink;
@@ -47,12 +51,48 @@ body{
     font-family:cursive;
 }
 
+.red-border {
+    border-style: solid;
+    border-color: red;
+
+}
+
+.red-outline {
+    outline-style: solid;
+    outline-color: red;
+
+}
+
+.overredborder {
+    border-style: solid;
+    border-color:red;
+}
+
+.overblueborder {
+    border-style: solid;
+    border-color:blue;
+}
+
+.mergeredborder {
+    border-style: solid solid none solid;
+    border-color:red;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.mergeblueborder {
+    border-style: solid;
+    border-color:blue;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 
 
  #content {
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
+
+    border: 1px;
+    border-radius: 8px;
     background-color: white;
 
 }
