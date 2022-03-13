@@ -64,7 +64,7 @@ hr{
 }
 
 .overredborder {
-    border: 1px solid red;
+    border: red solid 1px;
 
 }
 
