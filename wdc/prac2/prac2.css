@@ -4,11 +4,15 @@ p {
 }
 
 h1 {
-    font-family : 'sans-serif';
+    font-family : Raleway, sans-serif;
 }
 
 h2 {
-    font-family : 'sans-serif';
+    font-family : Raleway, sans-serif;
+}
+
+h4 {
+    font-family : Raleway, sans-serif;
 }
 
 pre {
