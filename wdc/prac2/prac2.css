@@ -92,6 +92,8 @@ hr{
  #content {
 
     border: 1px;
+    border-style: solid;
+    border-color:darkgrey;
     border-radius: 8px;
     background-color: white;
 
