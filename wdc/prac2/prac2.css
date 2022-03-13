@@ -64,13 +64,12 @@ hr{
 }
 
 .overredborder {
-    outline-style: solid;
-    outline-color:red;
+    border: 1px solid red;
+
 }
 
 .overblueborder {
-    border-style: solid;
-    border-color:blue;
+    border: 1px solid blue;
 }
 
 .mergeredborder {
