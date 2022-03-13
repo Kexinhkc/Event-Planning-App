@@ -64,8 +64,8 @@ hr{
 }
 
 .overredborder {
-    outl-style: solid;
-    border-color:red;
+    outline-style: solid;
+    outline-color:red;
 }
 
 .overblueborder {
