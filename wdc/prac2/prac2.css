@@ -29,6 +29,7 @@ a[href] {
 body{
     background-color: #DCF5F5;
     background-image: url("cross.png");
+
 }
 
 hr{
@@ -92,6 +93,9 @@ hr{
     border-bottom-right-radius: 8px;
 }
 
+.noto {
+    font-family:'Noto Serif',serif;
+}
 
 
  #content {
