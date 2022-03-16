@@ -57,6 +57,11 @@ li{
     float:left;
 }
 
+li a{
+    display:block;
+    padding: 8px;
+}
+
 .bp {
     color:darkblue;
     background-color:pink;
