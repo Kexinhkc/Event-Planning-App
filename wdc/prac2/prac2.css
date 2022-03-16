@@ -125,6 +125,10 @@ li a{
     border-bottom-right-radius: 8px;
 }
 
+.square {
+    list-style-type:square;
+}
+
 
  #content {
 
