@@ -99,6 +99,8 @@ blockquote{
 
 .icons{
     color: #BFCFD4;
+    margin:auto;
+    width: fit-content;
 }
 
 .mergeblueborder {
