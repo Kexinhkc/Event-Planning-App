@@ -62,7 +62,6 @@ ol{
 
 li a{
     display:block;
-    padding: 20px;
 }
 
 .bp {
@@ -130,6 +129,10 @@ li a{
 
 .square {
     list-style-type:square;
+}
+
+.menu{
+    display: inline-block;
 }
 
 
