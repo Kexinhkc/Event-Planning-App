@@ -37,6 +37,12 @@ hr{
     border-color:#CFDFE4;
 }
 
+blockquote{
+    font-family:'Raleway',sans-serif;
+    font-color:dimgrey;
+    line-height: normal;
+}
+
 .bp {
     color:darkblue;
     background-color:pink;
