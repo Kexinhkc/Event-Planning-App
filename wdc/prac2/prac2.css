@@ -43,6 +43,8 @@ blockquote{
     line-height: 1.5;
     word-spacing: 0.2 em;
     font-weight: normal;
+    text-align: justify;
+    text-justify: auto;
 }
 
 .bp {
