@@ -129,6 +129,8 @@ li a{
 
 .menu{
     display: inline-block;
+    margin: 0;
+  padding: 0;
 }
 
 
