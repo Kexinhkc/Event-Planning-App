@@ -133,14 +133,13 @@ li a{
     padding: 0;
     overflow: hidden;
     background-color:Darkgrey;
-    font-color:white;
     overflow: hidden;
     text-align:center;
 
 }
 
 .li {
-    float: left;
+    
   }
 
 li a{
