@@ -134,6 +134,11 @@ li a{
     overflow: hidden;
     background-color:Darkgrey;
     font-color:white;
+
+}
+
+li a{
+    float:left;
 }
 
 
