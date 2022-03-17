@@ -139,14 +139,12 @@ li a{
 }
 
 .li {
-    
+    float: left;
   }
 
 li a{
-    display: inline-block;
     color: white;
-
-    padding: 14px 5px;
+    padding: 14px 10px;
 }
 
 li a:hover{
