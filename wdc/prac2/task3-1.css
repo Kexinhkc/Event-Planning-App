@@ -47,5 +47,5 @@ div + p span span.color {
 }
 
 div + div span span.normal {
-    color: black;
+    color: green;
 }
