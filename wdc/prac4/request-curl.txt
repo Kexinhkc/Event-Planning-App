@@ -1,0 +1,5 @@
+curl --request HEAD \
+  --url https://google.com/ \
+  --header 'Content-Type: application/json' \
+  --cookie '1P_JAR=2022-03-30-00; NID=511%3DBNfYh-RJFBdbSC8V2n_dnbviqbwlS3DQX-sqwXQTC6Lmge2FduOhpKGMKF4RSMD-gXF5g2EkWxgMSDzdPxDnvMiVQnFSTGK6uQETGO9SUy9QKVn1uU7a7bZ1H1wyJY7ZZ6ySeme4u_qqKFAlNVjE9DKKQtM8qMyFPqATlVq2vEM' \
+  --data '{"title":"second", "content":"djksjdsc"}'
