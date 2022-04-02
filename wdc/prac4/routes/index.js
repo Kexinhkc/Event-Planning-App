@@ -12,7 +12,7 @@ router.get('/last.txt', function(req, res, next) {
 
   if(count == 0){
     res.send(' ');
-    time = Date.now();
+    time = Date.now()/1000;
     count++;
     res.send({time});
   }else{
