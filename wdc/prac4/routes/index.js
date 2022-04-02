@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 var count = 0;
 var time;
-router.get('/last.txt', function(req, res, next) {
+router.get('vnu', function(req, res, next) {
 
   if(count == 0){
     res.send(' ');
