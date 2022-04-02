@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 var count = 0;
-var time = '';
+var time;
 router.get('/last.txt', function(req, res, next) {
 
   if(count == 0){
