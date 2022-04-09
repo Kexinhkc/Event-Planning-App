@@ -22,9 +22,8 @@ router.get('/last.txt', function(req, res, next) {
 var colorCount = 0;
 router.get('/color.html', function(req, res, next) {
 
-    if (count==0){
-    count++;
-    res.send(time);
+    if (colorCount%10==0){
+    res.send();
     }else{
     count++;
     time = new Date();
