@@ -20,6 +20,7 @@ router.get('/last.txt', function(req, res, next) {
     });
 
 var colorCount = 0;
+var
 router.get('/color.html', function(req, res, next) {
 
     if (colorCount%10==0){
