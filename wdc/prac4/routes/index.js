@@ -18,10 +18,6 @@ router.get('/last.txt', function(req, res, next) {
       time = new Date();
       res.send(time);
     }
-
-
-
-
 });
 
 module.exports = router;
