@@ -23,7 +23,7 @@ var colorCount = 0;
 router.get('/color.html', function(req, res, next) {
 
     if (colorCount%10==0){
-    res.send();
+    res.send(`<html>`);
     }else{
     count++;
     time = new Date();
