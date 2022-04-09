@@ -23,12 +23,22 @@ var colorCount = 0;
 router.get('/color.html', function(req, res, next) {
 
     if (colorCount%10==0){
-    res.send(`<html>
-    head`);
-    }else{
-    count++;
-    time = new Date();
-    res.send(time);
+    res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Color</title>
+     <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1></h1>
+
+    </body>
+
+</html>`);
+    }
+
 
 });
 
