@@ -29,10 +29,9 @@ count++;
 time = new Date();
 res.send(time);
 
+}
 
 
-
-
-});
+);
 
 module.exports = router;
