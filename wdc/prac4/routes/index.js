@@ -17,21 +17,18 @@ router.get('/last.txt', function(req, res, next) {
       count++;
       time = new Date();
       res.send(time);
-    }
+    });
 
-router.get('/last.txt', function(req, res, next) {
+router.get('/color.html', function(req, res, next) {
 
-if (count==0){
-count++;
-res.send(time);
-}else{
-count++;
-time = new Date();
-res.send(time);
+    if (count==0){
+    count++;
+    res.send(time);
+    }else{
+    count++;
+    time = new Date();
+    res.send(time);
 
-}
-
-
-);
+});
 
 module.exports = router;
