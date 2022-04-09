@@ -19,28 +19,6 @@ router.get('/last.txt', function(req, res, next) {
       res.send(time);
     });
 
-var colorCount = 0;
-var
-router.get('/color.html', function(req, res, next) {
 
-    if (colorCount%4==0){
-    res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <title>Color</title>
-     <meta charset="UTF-8">
-    </head>
-
-    <body>
-        <h1 style="color:${}"></h1>
-
-    </body>
-
-</html>`);
-    }
-
-
-});
 
 module.exports = router;
