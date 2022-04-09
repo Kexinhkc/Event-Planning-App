@@ -23,7 +23,7 @@ var colorCount = 0;
 var
 router.get('/color.html', function(req, res, next) {
 
-    if (colorCount%10==0){
+    if (colorCount%4==0){
     res.send(`
     <!DOCTYPE html>
     <html lang="en">
@@ -33,7 +33,7 @@ router.get('/color.html', function(req, res, next) {
     </head>
 
     <body>
-        <h1></h1>
+        <h1 style="color:${}"></h1>
 
     </body>
 
