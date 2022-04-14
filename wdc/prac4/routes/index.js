@@ -25,6 +25,8 @@ var color = ["red","yellow","green","blue"];
 var colorSelected;
 router.get('/color.html', function(req, res, next) {
 
+      colorCount=colorCount%4;
+
       colorSelected=color[colorCount];
       colorCount++;
 
