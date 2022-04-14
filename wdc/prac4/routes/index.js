@@ -46,4 +46,8 @@ router.get('/color.html', function(req, res, next) {
 </html>`);
 });
 
+router.get('/log.html', function(req, res, next) {
+
+});
+
 module.exports = router;
