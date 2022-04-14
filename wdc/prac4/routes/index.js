@@ -22,14 +22,11 @@ router.get('/last.txt', function(req, res, next) {
 
 var colorCount = 0;
 var color = ["red","yellow","green","blue"];
+var colorSelected;
 router.get('/color.html', function(req, res, next) {
 
-    if (colorCount%4==0){
-      
-
-    }if else{
-
-    }
+      colorSelected=color[colorCount];
+      colorCount++;
 
     res.send(`
     <!DOCTYPE html>
@@ -40,14 +37,11 @@ router.get('/color.html', function(req, res, next) {
     </head>
 
     <body>
-        <h1 style="color:${}"></h1>
+        <h1 style="color:${colorSelected}"></h1>
 
     </body>
 
 </html>`);
-    }
-
-
 });
 
 module.exports = router;
