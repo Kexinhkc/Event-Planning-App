@@ -25,6 +25,11 @@ var color = ["red","yellow","green","blue"];
 router.get('/color.html', function(req, res, next) {
 
     if (colorCount%4==0){
+      
+
+    }if else{
+
+    }
 
     res.send(`
     <!DOCTYPE html>
