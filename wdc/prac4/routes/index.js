@@ -46,7 +46,27 @@ router.get('/color.html', function(req, res, next) {
 </html>`);
 });
 
+var dateStr="";
 router.get('/log.html', function(req, res, next) {
+  time = new Date();
+  dateStr=dateStr + "<li>" + time +"</li>";
+
+  res.send(`
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>Log</title>
+   <meta charset="UTF-8">
+  </head>
+
+  <body>
+      <ul>${dateStr}</ul>
+
+  </body>
+
+</html>`);
+
+
 
 });
 
