@@ -66,8 +66,12 @@ router.get('/log.html', function(req, res, next) {
 
 </html>`);
 
-
-
 });
+
+router.get('/first.html', function(req, res, next) {
+  
+});
+
+
 
 module.exports = router;
