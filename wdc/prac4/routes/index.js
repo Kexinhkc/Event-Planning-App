@@ -21,9 +21,11 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 var colorCount = 0;
+var color =
 router.get('/color.html', function(req, res, next) {
 
     if (colorCount%4==0){
+
     res.send(`
     <!DOCTYPE html>
     <html lang="en">
