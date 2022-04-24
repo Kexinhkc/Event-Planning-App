@@ -43,7 +43,7 @@ VALUES
 ('COMP SCI 2000','Computer Systems','ECMS'),
 ('PHIL 2039','Philosophy of Mind','Arts');
 
-INSERT INTO Subjects
+INSERT INTO Enrolments
 VALUES
 ('a1111111','COMP SCI 1102','62'),
 ('a1111111','COMP SCI 2000','80'),
