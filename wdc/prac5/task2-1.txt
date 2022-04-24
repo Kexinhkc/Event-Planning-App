@@ -27,8 +27,5 @@ CREATE TABLE Enrolments (
     mark INT
 );
 
-UPDATE Students
-SET Type = varchar(20)
-WHERE Type = int;
-
-ALTER TABLE Students Modify column student_id varchar(20);
+INSERT INTO Students
+VALUES (a1111111,Fang,Li,BE(Hons)(Soft));
