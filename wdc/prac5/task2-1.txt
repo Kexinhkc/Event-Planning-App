@@ -9,9 +9,8 @@
 4 rows in set (0.00 sec)
 
 CREATE TABLE Students (
-    student_id int,
-    given_name varchar(255),
-    family_name varchar(255),
-    program varchar(255),
-
+    student_id INT,
+    given_name VARCHAR(255),
+    family_name VARCHAR(255),
+    program VARCHAR(255)
 );
