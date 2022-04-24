@@ -45,8 +45,13 @@ VALUES
 
 INSERT INTO Subjects
 VALUES
-('COMP SCI 1102','Object Oriented Programming','ECMS'),
-('COMP SCI 2207','Web and Database Computing','ECMS'),
-('COMP SCI 2000','Computer Systems','ECMS'),
-('PHIL 2039','Philosophy of Mind','Arts');
+('a1111111','COMP SCI 1102','62'),
+('a1111111','COMP SCI 2000','80'),
+('a1111112','COMP SCI 1102','55'),
+('a1111112','COMP SCI 2207','80');
+('a1111113','PHIL 2039','65'),
+('a1111113','COMP SCI 1102','46'),
+('a1111114','COMP SCI 2207','67'),
+('a1111114','COMP SCI 2000','49');
+
 
