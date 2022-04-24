@@ -14,3 +14,9 @@ CREATE TABLE Students (
     family_name VARCHAR(255),
     program VARCHAR(255)
 );
+
+CREATE TABLE Subjects (
+    subject_code ,
+    subject VARCHAR(70),
+    faculty VARCHAR(50),
+);
