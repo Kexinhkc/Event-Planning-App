@@ -30,3 +30,5 @@ CREATE TABLE Enrolments (
 UPDATE Students
 SET Type = varchar(20)
 WHERE Type = int;
+
+ALTER TABLE Students Modify column student_id varchar(20);
