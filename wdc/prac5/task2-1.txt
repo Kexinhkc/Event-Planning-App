@@ -9,14 +9,20 @@
 4 rows in set (0.00 sec)
 
 CREATE TABLE Students (
-    student_id INT,
+    student_id VARCHAR(20),
     given_name VARCHAR(255),
     family_name VARCHAR(255),
     program VARCHAR(255)
 );
 
 CREATE TABLE Subjects (
-    subject_code ,
+    subject_code VARCHAR(20) ,
     subject VARCHAR(70),
-    faculty VARCHAR(50),
+    faculty VARCHAR(50)
+);
+
+CREATE TABLE Enrolments (
+    student_id VARCHAR(20),
+    subject_code VARCHAR(20),
+    mark INT
 );
