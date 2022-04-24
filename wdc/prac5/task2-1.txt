@@ -26,3 +26,7 @@ CREATE TABLE Enrolments (
     subject_code VARCHAR(20),
     mark INT
 );
+
+UPDATE Students
+SET Type = varchar(20)
+WHERE Type = int;
