@@ -12,6 +12,6 @@ CREATE TABLE Students (
     student_id int,
     given_name varchar(255),
     family_name varchar(255),
-    program varchar(255)
+    program varchar(255),
 
 );
