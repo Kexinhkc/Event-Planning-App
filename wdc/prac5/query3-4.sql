@@ -5,4 +5,4 @@ WHERE subject_code = 'COMP SCI 2207';
 
 SELECT * FROM Students
 INNER JOIN Enrolments
-ON Students.student_id=Enrolments.student_id;
+ON Enrolments.student_id=Students.student_id;
