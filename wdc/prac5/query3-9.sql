@@ -7,4 +7,4 @@ INNER JOIN Subjects
 ON Enrolments.subject_code = Subjects.subject_code
 WHERE student_id='a1111113'
 INNER JOIN Teachers
-ON ;
+ON Teachers.staff_id=Subject.teacher_id;
