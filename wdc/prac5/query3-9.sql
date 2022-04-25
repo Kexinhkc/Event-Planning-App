@@ -3,4 +3,6 @@ join the table with subjects, get teacher_id
 join the table with teachers table, get name
 
 SELECT subject_code FROM Enrolments
-WHERE student_id ='a1111113';
+INNER JOIN Subjects
+ON Enrolments.student_id = Subjects.student_id
+WHERE student_id='a1111113';
