@@ -5,6 +5,7 @@ FROM Enrolments
 INNER JOIN Subjects
 ON Enrolments.subject_code=Subjects.subject_code
 INNER JOIN Students
+ON 
 ;
 
 INNER JOIN Subjects
