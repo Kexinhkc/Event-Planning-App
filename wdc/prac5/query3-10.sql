@@ -3,6 +3,6 @@ for each student taking one or more subjects outside of the ECMS faculty, lists 
 SELECT Students.given_name,Students.family_name,Students.program,Subjects.subject,Subjects.faculty
 FROM Students
 INNER JOIN Enrolments
-ON Enrolments.subject_code=Subjects.subject_code
-INNER JOIN Students
+ON Students.student_id=Enrolments.student_id
+INNER JOIN Subjects
 ON Subjects.
