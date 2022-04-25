@@ -1,4 +1,4 @@
-SELECT given_name,family_name FROM Students
+SELECT given_name,family_name, Students.student_id FROM Students
 INNER JOIN Enrolments
 ON Students.student_id=Enrolments.student_id
-WHERE program = 'BCompSc';
+WHERE Subjects = 'Web and Database Computing';
