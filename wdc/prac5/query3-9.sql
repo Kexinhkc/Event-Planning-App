@@ -1,0 +1,1 @@
+find out subjects code he studied 
