@@ -1,1 +1,1 @@
-SELECT
+SELECT Students.student_id , Students.program FROM Students;
