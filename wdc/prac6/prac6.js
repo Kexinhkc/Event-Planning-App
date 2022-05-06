@@ -48,7 +48,11 @@ var vueinst = new Vue({
       special:SPECIALS[0],
       show_ad:true,
       dark_mode:false,
-      top_menu:
+      top_menu:[
+      { title:'Home',         url:'/' }
+      { title:'About',        url:'/about' }
+      { title:'Contact Us',   url:'/contact' }
+      ]
     }
 
 });
