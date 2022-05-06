@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="prac6.css">
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-        <script src="prac6_vue.js" defer></script>
+        <script src="prac6.js" defer></script>
 
 
     </head>
@@ -36,16 +36,16 @@
                 </nav>
             </header>
 
-            <div class="pad" id="ad">
+            <div class="pad" id="ad" v-if="show_ad === true">
                 <button class="pure-button" style="float:right;" onclick="vueinst.show_ad = false;">close</button>
-                <img src="" alt="" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
-                <h3>Some Name</h3>
-                <p>$Some.Price</p>
+                <img v-bind:src="special.url" alt="" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
+                <h3>{{ special.name }}</h3>
+                <p>{{ special.price }}</p>
             </div>
 
 
 
-            <main class="pure-g">
+            <main class="pure-g" v-if="show_ad === false">
 
                 <div class="pad pure-u-2-3">
                     <div id="items">
@@ -61,7 +61,7 @@
 
                     <h3>Salt or Pepper?</h3>
                     <!-- TASK 1.1 -->
-                    <p id="sp">{{choose}}</p>
+                    <p id="sp">{{ choose }}</p>
                     <button class="pure-button pure-u-1-4" onclick="vueinst.choose='Salt';">Salt</button>
                     <button class="pure-button pure-u-1-4" onclick="vueinst.choose='Pepper!';">Pepper</button>
 
