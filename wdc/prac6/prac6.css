@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5 {
     margin-right: 1em;
 }
 
-.app {
+#app.colour {
     background-color:#333533;
     color:#F5CB5C;
 }
