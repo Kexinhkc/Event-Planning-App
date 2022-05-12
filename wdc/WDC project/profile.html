@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+<meta charset = "UTF-8">
+<link rel = "stylesheet" href="project.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id = "icon">
+        <button class = "btn button-home" onclick = "location.href = './welcome.html'">
+            <i class="fa fa-home"></i>
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './home.html'">
+            <i class="fa fa-calendar"></i>
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './profile.html'">
+        <i class="fa fa-address-card-o"></i>
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './login.html'">
+        <i class="fa fa-user-circle"></i>
+        </button>
+    </div>
+    <div class = "createAccount" style = "font-weight: bold;">PROFILE</div>
+    <hr>
+    <div class = "centre">
+    <input type = "email" id = "input" value = "Email">
+    </div>
+    <div class = "centre">
+    <input type = "password" id = "input" value = "Password">
+    </div>
+    <div class = "centre">
+        <input type = "text" id = "input" value = "First Name">
+    </div>
+        <div class = "centre">
+            <input type = "text" id = "input" value = "Last Name">
+        </div>
+        <div class = "centre">
+            <button class = "button-login btn">EDIT</button>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="project.js" defer></script>
+</body>
+</html>
