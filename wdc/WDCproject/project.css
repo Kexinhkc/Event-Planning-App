@@ -5,7 +5,7 @@
 
     font-size: 13vh;
     margin-top: 20vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .centre{
@@ -17,9 +17,9 @@
     color : white;
     border: black solid 1px;
 
-    padding: 20px;
+    padding: 22px;
     margin-top: 1.5cm;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
 
 }
