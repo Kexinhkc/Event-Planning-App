@@ -1,5 +1,5 @@
 .welcome{
-    font-family: serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: bold;
     text-align: center;
 
@@ -15,7 +15,7 @@
     background-color: white;
     color : #000000;
     border: black solid 1px;
-    
+
     padding: 15px;
     margin-top: 1.5cm;
     font-size: 1cm;
@@ -23,7 +23,7 @@
 
 }
 
-#icon { 
+#icon {
     text-align: right;
     font-size: 40px;
 }
@@ -36,7 +36,7 @@
 {
     background-color: black;
     color : #FFFFFF;
-    
+
     padding-top: 0.6%;
     margin-top: 1.5cm;
     width:4cm;
@@ -158,7 +158,7 @@
 .button-create{
     background-color: black;
     color : #FFFFFF;
-    
+
     padding-top: 0.6%;
     margin-top: 0.5cm;
     width:4cm;
@@ -174,7 +174,7 @@
 .button-link{
     background-color: black;
     color : #FFFFFF;
-    
+
     padding: 0.6%;
     margin-top: 1cm;
     width:6cm;
