@@ -33,4 +33,32 @@ router.post('/pass-it-on', function(req, res, next) {
 
 });
 
+
+router.post('/combine', function(req, res, next){
+  var sentence='';
+  var lines=[];
+  lines=req.body.lines;
+  var suffix=req.body.suffix;
+
+  for (let i =0;i<lines.length;i++){
+      sentence=sentence+lines[i]+suffix+'\n';
+  }
+
+  res.send(sentence);
+
+  });
+
+  router.get('/cookie',function(req,res,next){
+      if ('task3_1' in req.cookies){
+          console.log(req.cookies);
+           console.log(parseInt(req.cookies.task3_1)+1);
+          res.cookie('task3_1',parseInt(req.cookies.task3_1)+1);
+      }
+     else{
+         res.cookie('task3_1',1);
+  }
+
+     res.send();
+  });
+
 module.exports = router;
