@@ -19,13 +19,16 @@ router.get('/brew', function(req, res, next) {
 
 });
 
+var preVal = "first"
 router.get('/pass-it-on', function(req, res, next) {
   var message = req.body.message;
 
-  if (message == null){
+  if (message === null){
     res.sendStatus(400);
+    
   }else{
-    res.sendStatus(418);
+    res.send(preVal);
+    preVal = message;
   }
 
 });
