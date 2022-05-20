@@ -19,8 +19,8 @@ router.get('/brew', function(req, res, next) {
 
 });
 
-var preVal = "first"
-router.get('/pass-it-on', function(req, res, next) {
+var preVal = "first";
+router.post('/pass-it-on', function(req, res, next) {
   var message = req.body.message;
 
   if (message===null||req.body.submit===null){
@@ -32,4 +32,5 @@ router.get('/pass-it-on', function(req, res, next) {
   }
 
 });
+
 module.exports = router;
