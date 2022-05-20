@@ -35,6 +35,21 @@ router.post('/pass-it-on', function(req, res, next) {
 
 });
 
+/* 1.3 */
+router.post('/combine', function(req, res, next){
+  var sentence='';
+  var lines=[];
+  lines=req.body.lines;
+  var suffix=req.body.suffix;
+
+  for (let i =0;i<lines.length;i++){
+      sentence=sentence+lines[i]+suffix+'\n';
+  }
+
+  res.send(sentence);
+
+  });
+
 /* 2.2 */
 router.post('/*', function(req, res, next){
   if (req.method==="POST"){
