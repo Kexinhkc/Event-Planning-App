@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/brew', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var drink = req.query.drink;
+
+  if (drink == "tea"){
+    
+  }
 });
 
 module.exports = router;
