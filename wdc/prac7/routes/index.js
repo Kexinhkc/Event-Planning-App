@@ -20,14 +20,12 @@ router.get('/brew', function(req, res, next) {
 });
 
 router.get('/pass-it-on', function(req, res, next) {
-  var drink = req.query.drink;
+  var message = req.body.message;
 
-  if (drink == "tea"){
-    res.send('A delicious cup of tea!');
-  }else if (drink == "coffee"){
-    res.sendStatus(418);
-  }else{
+  if (message == null){
     res.sendStatus(400);
+  }else{
+    res.sendStatus(418);
   }
 
 });
