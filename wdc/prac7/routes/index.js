@@ -23,9 +23,9 @@ var preVal = "first"
 router.get('/pass-it-on', function(req, res, next) {
   var message = req.body.message;
 
-  if (message === null){
+  if (message===null||req.body.submit===null){
     res.sendStatus(400);
-    
+
   }else{
     res.send(preVal);
     preVal = message;
