@@ -1,4 +1,4 @@
-SELECT DATEDIFF()
+SELECT DATEDIFF(Millisecond,)
 FROM rental
 INNER JOIN customer
 ON rental.customer_id=customer.customer_id;
