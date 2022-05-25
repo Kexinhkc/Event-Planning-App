@@ -1,7 +1,5 @@
-SELECT DATEDIFF(Millisecond,)
-FROM rental
-INNER JOIN customer
-ON rental.customer_id=customer.customer_id;
+SELECT DATEDIFF(Millisecond,rental_date,return_date)
+FROM rental;
 
 
 
