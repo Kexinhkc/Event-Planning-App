@@ -1,4 +1,4 @@
-SELECT MAX(TIMESTAMPDIFF(MINUTE,rental_date,return_date))
+SELECT customer_id,MAX(TIMESTAMPDIFF(MINUTE,rental_date,return_date))
 FROM rental;
 
 
