@@ -7,10 +7,9 @@ WHERE title = 'TWISTED PIRATES';
 
 select store_id
 From inventory AS i
-WHERE film_id = 918
 INNER JOIN store AS s
 ON i.store_id = s.store_id
-;
+WHERE film_id = 918;
 INNER JOIN address AS a
 ON i.addre
 
