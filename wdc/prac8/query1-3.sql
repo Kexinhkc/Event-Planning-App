@@ -1,4 +1,4 @@
-SELECT DATEDIFF(millisecond,rental_date,return_date) AS DateDiff
+SELECT DATEDIFF(ms,rental.rental_date,rental.return_date) AS DateDiff
 FROM rental;
 
 
