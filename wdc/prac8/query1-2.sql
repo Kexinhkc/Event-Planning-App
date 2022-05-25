@@ -1,2 +1,2 @@
-SELECT MIN(film_id)
+SELECT first_name,last_name
 FROM film;
