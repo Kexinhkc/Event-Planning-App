@@ -1,2 +1,2 @@
-SELECT MAX(film_id)
+SELECT MIN(film_id)
 FROM film;
