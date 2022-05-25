@@ -1,4 +1,4 @@
-SELECT MIN(rental_date)
+SELECT DATEDIFF()
 FROM rental
 INNER JOIN customer
 ON rental.customer_id=customer.customer_id;
