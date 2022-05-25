@@ -1,5 +1,6 @@
-SELECT TIMESTAMPDIFF(MINUTE,return_date,rental_date) AS DateDiff
+SELECT MAX(TIMESTAMPDIFF(MINUTE,rental_date,return_date))
 FROM rental;
+WHE;
 
 DATEDIFF(r.return_date,r.rental_date)
 
