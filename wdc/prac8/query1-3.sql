@@ -9,5 +9,3 @@ FROM rental
 WHERE return_date = null
 ;
 
-
- name of the person with the longest standing current rental, not yet return
