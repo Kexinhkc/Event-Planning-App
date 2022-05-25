@@ -5,7 +5,7 @@ select film_id
 FROM film
 WHERE title = 'TWISTED PIRATES';
 
-select address
+select *
 From inventory AS i
 INNER JOIN store AS s
 ON i.store_id = s.store_id
