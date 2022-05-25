@@ -8,6 +8,6 @@ WHERE title = 'TWISTED PIRATES';
 From inventory AS i
 INNER JOIN address AS a
 
-select address2
+select address2,district
 FROM address
-WHERE title = 'TWISTED PIRATES';
+LIMIT 50;
