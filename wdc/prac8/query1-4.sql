@@ -7,3 +7,7 @@ WHERE title = 'TWISTED PIRATES';
 
 From inventory AS i
 INNER JOIN address AS a
+
+select address2
+FROM address
+WHERE title = 'TWISTED PIRATES';
