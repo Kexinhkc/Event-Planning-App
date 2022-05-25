@@ -3,9 +3,7 @@ FROM rental
 INNER JOIN customer
 ON rental.customer_id = customer.customer_id
 GROUP BY rental.customer_id
-WHERE MIN(rental_date);
-ORDER BY rental_date DESC
-WHERE ROWNUM = 1;
+WHERE rental_date = (SELECT MIN(rental_date) FROM  rental);
 
 
 
