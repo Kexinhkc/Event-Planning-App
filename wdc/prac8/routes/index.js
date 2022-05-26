@@ -14,6 +14,19 @@ router.get('/actors.html', function(req, res, next) {
       res.sendStatus(500);
       return;
     }
+
+    let query = "";
+    connection.query(query, function(error, rows, fields) {
+      connection.release(); // release connection
+      if (error) {
+        console.log(error);
+        res.sendStatus(500);
+        return;
+      }
+      res.end();
+    });
+
+  });
 });
 
 module.exports = router;
