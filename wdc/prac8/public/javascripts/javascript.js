@@ -6,13 +6,16 @@ function loadPage() {
         var table = document.getElementsByTagName("tbody");
 
         for (let item in actors){
-            var row = document.createElement("tr");
-            var cell1 = document.createElement("td");
-            cell1.innerText = item.first_name;
-            var cell2 = document.createElement("td");
-            cell2.innerText = item.last_name;
-            document.row.appendChild(cell2);
-            document.table.appendChild(row);
+            console.log(actors.first_name);
+            console.log(actors.last_name);
+
+            // var row = document.createElement("tr");
+            // var cell1 = document.createElement("td");
+            // cell1.innerText = item.first_name;
+            // var cell2 = document.createElement("td");
+            // cell2.innerText = item.last_name;
+            // document.row.appendChild(cell2);
+            // document.table.appendChild(row);
         }
 
     }
