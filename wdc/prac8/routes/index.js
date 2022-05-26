@@ -7,7 +7,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/actors.html', function(req, res, next) {
-  
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      console.log(error);
+      res.sendStatus(500);
+      return;
+    }
 });
 
 module.exports = router;
