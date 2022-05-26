@@ -7,11 +7,12 @@ function loadPage() {
 
         for (item in actors){
             var row = document.createElement("tr");
-            var cell = document.createElement("td");
-            cell.innerText = item.first_name;
-            var cell = document.createElement("td");
-            cell.innerText = item.first_name;
-            document.row.appendChild(cell);
+            var cell1 = document.createElement("td");
+            cell1.innerText = item.first_name;
+            var cell2 = document.createElement("td");
+            cell2.innerText = item.last_name;
+            document.row.appendChild(cell2);
+            document.table.appendChild(row);
         }
 
     }
