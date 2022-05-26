@@ -1,13 +1,16 @@
 function loadPage() {
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var actors = JSON.parse(this.responseText);
         var table = document.getElementsByTagName("tbody");
 
-        for (let item in actors){
-            console.log(actors.first_name);
-            console.log(actors.last_name);
+        console.log("okay");
+
+        // for (let item in actors){
+        //     console.log(actors.first_name);
+        //     console.log(actors.last_name);
 
             // var row = document.createElement("tr");
             // var cell1 = document.createElement("td");
@@ -19,8 +22,7 @@ function loadPage() {
         }
 
     }
+    xhttp.open("GET", "/actors.html", true);
+    xhttp.send();
   };
 
-  xhttp.open("GET", "/actors.html", true);
-  xhttp.send();
-}
