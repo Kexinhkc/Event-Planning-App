@@ -20,8 +20,7 @@ function loadPage() {
             // document.row.appendChild(cell2);
             // document.table.appendChild(row);
         }
-
-    }
+    };
     xhttp.open("GET", "/actors.html", true);
     xhttp.send();
   };
