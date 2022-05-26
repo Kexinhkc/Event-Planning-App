@@ -5,7 +5,7 @@ function loadPage() {
         var actors = JSON.parse(this.responseText);
         var table = document.getElementsByTagName("tbody");
 
-        for (item in actors){
+        for (let item in actors){
             var row = document.createElement("tr");
             var cell1 = document.createElement("td");
             cell1.innerText = item.first_name;
