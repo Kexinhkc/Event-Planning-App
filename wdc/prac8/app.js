@@ -7,14 +7,6 @@ var mysql = require('mysql');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
-
-var dbConnectionPool = mysql.createPool({host:'127.0.0.1',database:'sakila'})
-app.use(function(req,res,next){
-    req.pool = dbConnectionPool;
-    next();
-});
-
 
 var app = express();
 
