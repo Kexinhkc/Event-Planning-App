@@ -2,8 +2,10 @@ function loadPage() {
     //console.log('insideeee')
     var some = document.getElementById("one");
     var actor = document.getElementById("two");
-    some.remove();
-    actor.remove();
+    // some.remove();
+    // actor.remove();
+    some.innerHTML="";
+    actor.innerHTML="";
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
