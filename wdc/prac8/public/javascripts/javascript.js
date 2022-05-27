@@ -50,7 +50,7 @@ function addActor() {
       }
   }
 
-  xhttp.open("POST", "/add");
+  xhttp.open("POST", "/add",true);
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send(JSON.stringify(actor));
 
