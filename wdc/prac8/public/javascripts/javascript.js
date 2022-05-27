@@ -33,8 +33,8 @@ function loadPage() {
 function addActor() {
 
   let actor = {
-    firstname: document.getElementsByID('actor-first-name')[0].value,
-    lastname: document.getElementsByID('actor-last-name')[0].value
+    firstname: document.getElementByID('actor-first-name')[0].value,
+    lastname: document.getElementByID('actor-last-name')[0].value
   };
 
   let xhttp = new XMLHttpRequest();
