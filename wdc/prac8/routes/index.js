@@ -15,7 +15,7 @@ router.post('/add', function(req, res, next) {
       return;
     }
 
-    let query = "INSERT INTO posts (user,title,content,timestamp,views) VALUES(?,?,?,CURRENT_TIMESTAMP(),1);";
+    let query = "INSERT INTO actor (first_name,last_name) VALUES(?,?,?,CURRENT_TIMESTAMP(),1);";
     connection.query(query,[1,req.body.title,req.body.desc], function(error, rows, fields) {
       connection.release(); // release connection
       if (error) {
