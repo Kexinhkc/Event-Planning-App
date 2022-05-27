@@ -1,6 +1,9 @@
 function loadPage() {
     //console.log('insideeee')
-    var someactor = document.getElementsByTagName("tbody");
+    var someactor = document.getElementsByTagName("td");
+    someactor[0].remove();
+    someactor[1].remove();
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
