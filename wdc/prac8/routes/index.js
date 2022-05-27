@@ -33,8 +33,6 @@ router.get('/actors', function(req, res, next) {
 
 
 
-
-
 router.post('/add', function(req, res, next) {
 
   req.pool.getConnection(function(error,connection){
