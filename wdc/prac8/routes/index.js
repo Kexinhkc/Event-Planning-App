@@ -7,27 +7,22 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/add', function(req, res, next) {
-  
+
+  if ('firstname' in req.body && 'lastname' in req.body) {
+    
+  }
+
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
       res.sendStatus(500);
       return;
     }
-
-    let query = "SELECT first_name, last_name FROM actor;";
-    connection.query(query, function(error, rows, fields) {
-      connection.release(); // release connection
-      if (error) {
-        console.log(error);
-        res.sendStatus(500);
-        return;
-      }
-
-      res.send(rows);
-    });
-
   });
+
+
+
+
 });
 
 
