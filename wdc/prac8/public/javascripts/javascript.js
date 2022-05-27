@@ -12,7 +12,7 @@ function loadPage() {
          var table = document.getElementsByTagName("tbody");
 
 
-       // console.log(actors)
+       console.log(actors)
 
         for (var i=0;i<actors.length; i++){
             // console.log(item.first_name);
