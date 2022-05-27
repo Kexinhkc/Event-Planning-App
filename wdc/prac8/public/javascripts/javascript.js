@@ -1,9 +1,9 @@
 function loadPage() {
     //console.log('insideeee')
-    var some = document.getElementById("one");
-    var actor = document.getElementById("two");
+    var some = document.getElementById("row");
+    //var actor = document.getElementById("two");
      some.remove();
-     actor.remove();
+    //  actor.remove();
     // some.innerHTML="";
     // actor.innerHTML="";
 
