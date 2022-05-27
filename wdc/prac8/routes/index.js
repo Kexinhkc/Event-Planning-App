@@ -42,7 +42,7 @@ router.post('/add', function(req, res, next) {
     }
 
 
-    let query = "INSERT INTO actor (first_name,last_name) VALUES(?,?); ";
+    var query = "INSERT INTO actor (first_name,last_name) VALUES(?,?); ";
     connection.query(query,[req.body.firstname,req.body.lastname], function(error, rows, fields) {
       connection.release(); // release connection
       if (error) {
