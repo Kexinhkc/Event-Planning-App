@@ -25,6 +25,8 @@ router.get('/actors', function(req, res, next) {
         return;
       }
 
+      console.log(rows[0].first_name);
+
       res.json(rows);
     });
 
