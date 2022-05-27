@@ -6,10 +6,7 @@ function loadPage() {
 
          var actors =JSON.parse(this.responseText);
          var table = document.getElementsByTagName("tbody");
-         if (actors[0].first_name === "") {
-          //  block of code to be executed if the condition is true
-        }
-
+        
 
        // console.log(actors)
 
