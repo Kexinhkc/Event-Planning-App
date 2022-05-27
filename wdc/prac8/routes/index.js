@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/actors.html', function(req, res, next) {
 
+  console.log("okay");
+
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
@@ -24,7 +26,7 @@ router.get('/actors.html', function(req, res, next) {
         return;
       }
 
-      console.log("okay");
+
       res.json(rows);
     });
 
