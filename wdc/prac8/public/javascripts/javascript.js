@@ -32,7 +32,7 @@ function loadPage() {
 
 function addActor() {
 
-  let user = {
+  let actor = {
     firstname: document.getElementsByID('actor-first-name')[0].value,
     lastname: document.getElementsByID('actor-last-name')[0].value
   };
@@ -47,7 +47,7 @@ function addActor() {
 
   xhttp.open("POST", "/add");
   xhttp.setRequestHeader("Content-type", "application/json");
-  xhttp.send(JSON.stringify(user));
+  xhttp.send(JSON.stringify(actor));
 
 }
 
