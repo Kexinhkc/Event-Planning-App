@@ -9,23 +9,24 @@ function loadPage() {
 
         console.log(actors)
 
-        for (let item in actors){
+        for (var i=0;i<actors.length; i++){
             // console.log(item.first_name);
             // console.log(item.last_name);
 
             var row = document.createElement("tr");
             var cell1 = document.createElement("td");
-            cell1.innerText = item.first_name;
+            cell1.innerText = actors[i].first_name;
             row.appendChild(cell1);
             var cell2 = document.createElement("td");
-            cell2.innerText = item.last_name;
+            cell2.innerText = actors[i].last_name;
             row.appendChild(cell2);
             table[0].appendChild(row);
         }
     }
-    xhttp.open("GET", "/actors", true);
-    xhttp.send();
+
   }
+  xhttp.open("GET", "/actors", true);
+  xhttp.send();
 }
 
 

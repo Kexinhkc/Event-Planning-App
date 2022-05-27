@@ -7,8 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/actors', function(req, res, next) {
-
-  console.log('inside heree');
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
@@ -24,8 +22,6 @@ router.get('/actors', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-
-      console.log(rows[0].first_name);
 
       res.send(rows);
     });
