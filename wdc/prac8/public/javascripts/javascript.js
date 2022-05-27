@@ -1,13 +1,13 @@
 function loadPage() {
-
+    console.log('insideeee')
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {
 
          var actors =JSON.parse(this.responseText);
          var table = document.getElementsByTagName("tbody");
 
-        console.log(actors[0].last_name)
+        console.log(actors)
 
         for (let item in actors){
             // console.log(item.first_name);
