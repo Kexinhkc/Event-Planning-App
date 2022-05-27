@@ -6,7 +6,7 @@ function loadPage() {
          var actors = JSON.parse(this.responseText);
         // var table = document.getElementsByTagName("tbody");
 
-        console.log(actors[0]);
+        console.log(actors[0].first_name);
 
         // for (let item in actors){
         //     console.log(actors.first_name);
