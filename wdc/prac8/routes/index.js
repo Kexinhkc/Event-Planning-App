@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/actors', function(req, res, next) {
+router.get('/getActors', function(req, res, next) {
 
 
   req.pool.getConnection(function(error,connection){
@@ -27,7 +27,7 @@ router.get('/actors', function(req, res, next) {
 
       console.log(rows[0].first_name);
 
-      res.send(rows);
+      res.json(rows);
     });
 
   });
