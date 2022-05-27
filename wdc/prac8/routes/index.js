@@ -53,7 +53,7 @@ router.post('/add', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-      res.end();
+      res.send(rows);
     });
 
   });
