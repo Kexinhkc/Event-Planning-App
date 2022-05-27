@@ -8,18 +8,25 @@ router.get('/', function(req, res, next) {
 
 router.post('/add', function(req, res, next) {
 
-  if ('firstname' in req.body && 'lastname' in req.body) {
-    
-  }
-
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
       res.sendStatus(500);
       return;
     }
-  });
 
+    let query = "INSERT INTO posts (user,title,content,timestamp,views) VALUES(?,?,?,CURRENT_TIMESTAMP(),1);";
+    connection.query(query,[1,req.body.title,req.body.desc], function(error, rows, fields) {
+      connection.release(); // release connection
+      if (error) {
+        console.log(error);
+        res.sendStatus(500);
+        return;
+      }
+      res.end();
+    });
+
+  });
 
 
 
