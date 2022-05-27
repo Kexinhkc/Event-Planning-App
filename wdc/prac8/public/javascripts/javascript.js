@@ -32,6 +32,11 @@ function loadPage() {
 
 function addActor() {
 
+  let user = {
+    firstname: document.getElementsByName('username')[0].value,
+    lastname: document.getElementsByName('password')[0].value
+  };
+
   let xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function () {
