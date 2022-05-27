@@ -4,8 +4,8 @@ function loadPage() {
     var actor = document.getElementById("two");
      some.remove();
      actor.remove();
-    some.innerHTML="";
-    actor.innerHTML="";
+    // some.innerHTML="";
+    // actor.innerHTML="";
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
