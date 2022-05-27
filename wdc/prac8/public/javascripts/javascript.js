@@ -21,7 +21,7 @@ function loadPage() {
             // document.table.appendChild(row);
         }
     };
-    xhttp.open("GET", "/actors.html", true);
+    xhttp.open("GET", "/actors", true);
     xhttp.send();
   }
 
