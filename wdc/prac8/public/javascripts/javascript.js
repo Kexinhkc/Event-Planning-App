@@ -6,6 +6,7 @@ function loadPage() {
 
          var actors =JSON.parse(this.responseText);
          var table = document.getElementsByTagName("tbody");
+         DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
        // console.log(actors)
 
