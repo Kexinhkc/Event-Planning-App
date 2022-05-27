@@ -22,7 +22,7 @@ function loadPage() {
         //     document.table.appendChild(row);
         }
     };
-    xhttp.open("GET", "/actors", true);
+    xhttp.open("GET", "/getActors", true);
     xhttp.send();
   }
 
