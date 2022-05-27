@@ -38,12 +38,12 @@ function loadPage() {
 
 function addActor() {
 
-  let actor = {
+  var actor = {
     firstname: document.getElementById('actor-first-name').value,
     lastname: document.getElementById('actor-last-name').value
   };
 
-  let xhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
