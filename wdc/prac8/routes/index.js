@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/actors.html');
+  res.render('index', { title: 'Express' });
 });
 
 
@@ -29,6 +29,8 @@ router.get('/actors', function(req, res, next) {
 
   });
 });
+
+
 
 
 
