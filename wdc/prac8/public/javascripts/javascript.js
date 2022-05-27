@@ -23,7 +23,7 @@ function loadPage() {
             table[0].appendChild(row);
         }
     }
-    xhttp.open("GET", "/getActors", true);
+    xhttp.open("GET", "/actors", true);
     xhttp.send();
   }
 }
