@@ -40,7 +40,7 @@ function loadPage() {
 
 function addActor() {
 
-  var actor = {
+  let actor = {
     firstname: document.getElementById('actor-first-name').value,
     lastname: document.getElementById('actor-last-name').value
   };
