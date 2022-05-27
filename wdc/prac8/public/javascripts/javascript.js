@@ -15,16 +15,16 @@ function loadPage() {
 
        console.log(actors)
 
-        for (var i=0;i<actors.length; i++){
+        for (var item in actors){
             // console.log(item.first_name);
             // console.log(item.last_name);
 
             var row = document.createElement("tr");
             var cell1 = document.createElement("td");
-            cell1.innerText = actors[i].first_name;
+            cell1.innerText = item.first_name;
             row.appendChild(cell1);
             var cell2 = document.createElement("td");
-            cell2.innerText = actors[i].last_name;
+            cell2.innerText = item.last_name;
             row.appendChild(cell2);
             table[0].appendChild(row);
         }
