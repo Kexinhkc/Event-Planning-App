@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/add', function(req, res, next) {
+  
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
