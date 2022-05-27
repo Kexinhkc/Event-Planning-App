@@ -16,9 +16,10 @@ function loadPage() {
             var row = document.createElement("tr");
             var cell1 = document.createElement("td");
             cell1.innerText = item.first_name;
+            document.row.appendChild(cell1);
             var cell2 = document.createElement("td");
             cell2.innerText = item.last_name;
-            document.row.appendChild(cell1);
+            document.row.appendChild(cell2);
             document.table.appendChild(row);
         }
     };
