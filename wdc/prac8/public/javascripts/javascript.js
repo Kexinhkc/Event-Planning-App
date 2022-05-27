@@ -24,4 +24,5 @@ function loadPage() {
     xhttp.open("GET", "/actors.html", true);
     xhttp.send();
   }
+}
 
