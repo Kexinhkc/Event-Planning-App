@@ -15,6 +15,15 @@ app.use(function(req,res,next){
     next();
 });
 
+
+var app = express();
+
+var dbConnectionPool = mysql.createPool({ host: 'localhost', database: 'wdcoverflow'});
+app.use(function(req,res,next){
+  req.pool = dbConnectionPool;
+  next();
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
