@@ -18,7 +18,7 @@ function loadPage() {
             cell1.innerText = item.first_name;
             var cell2 = document.createElement("td");
             cell2.innerText = item.last_name;
-            document.row.appendChild(cell2);
+            document.row.appendChild(cell1);
             document.table.appendChild(row);
         }
     };
