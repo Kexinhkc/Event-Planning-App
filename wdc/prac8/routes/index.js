@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/getActors', function(req, res, next) {
 
-
+  console.log('inside heree');
   req.pool.getConnection(function(error,connection){
     if(error){
       console.log(error);
