@@ -1,5 +1,5 @@
 function loadPage() {
-    console.log('insideeee')
+    //console.log('insideeee')
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -7,7 +7,7 @@ function loadPage() {
          var actors =JSON.parse(this.responseText);
          var table = document.getElementsByTagName("tbody");
 
-        console.log(actors)
+       // console.log(actors)
 
         for (var i=0;i<actors.length; i++){
             // console.log(item.first_name);
