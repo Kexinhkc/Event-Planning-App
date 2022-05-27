@@ -25,6 +25,7 @@ function loadPage() {
     xhttp.open("GET", "/getActors", true);
     xhttp.send();
   }
+}
 
 
 
