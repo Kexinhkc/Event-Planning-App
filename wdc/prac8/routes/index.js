@@ -26,6 +26,7 @@ router.get('/actors', function(req, res, next) {
         return;
       }
 
+      console.log("okay2");
 
       res.json(rows);
     });
