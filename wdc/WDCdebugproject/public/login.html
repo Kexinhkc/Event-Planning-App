@@ -30,11 +30,18 @@
     </form> -->
 
     <div id="g_id_onload"
-     data-client_id="YOUR_GOOGLE_CLIENT_ID"
-     data-login_uri="https://your.domain/your_login_endpoint"
-     data-your_own_param_1_to_login="any_value"
-     data-your_own_param_2_to_login="any_value">
-</div>
+    data-client_id="YOUR_GOOGLE_CLIENT_ID"
+    data-login_uri="https://your.domain/your_login_endpoint"
+    data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+    data-type="standard"
+    data-size="large"
+    data-theme="outline"
+    data-text="sign_in_with"
+    data-shape="rectangular"
+    data-logo_alignment="left">
+    </div>
 
     <div class = "centre"><button class = "btn button-createAccount" onclick = "location.href = './createAccount.html'">CREATE ACCOUNT</button></div>
 
@@ -47,6 +54,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="project.js" defer></script>
 </body>
 </html>
