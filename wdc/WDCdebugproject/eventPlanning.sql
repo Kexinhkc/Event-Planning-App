@@ -1,6 +1,6 @@
-CREATE DATABASE myDatabase;
+CREATE DATABASE eventPlanning;
 
-USE myDatabase;
+USE eventPlanning;
 
 CREATE TABLE admin (
     email VARCHAR(127),
