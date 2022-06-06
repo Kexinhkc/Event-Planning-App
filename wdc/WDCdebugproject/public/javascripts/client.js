@@ -11,11 +11,8 @@ function onSignIn(googleUser) {
     //   console.log('Email: ' + profile.getEmail());
     // }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://yourbackend.example.com/tokensignin');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function() {
-    console.log('Signed in as: ' + xhr.responseText);
-    };
-    xhr.send('idtoken=' + id_token);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('POST', '',true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.send(JSON.stringify('id_token'));
   }
