@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <meta name="google-signin-client_id" content="1006345318538-06u5fqd3sur2bthaea307jtjalc33f3r.apps.googleusercontent.com">
 
 <title>EVENT PLANNER</title>
@@ -29,18 +29,18 @@
         <div class = "centre"><input type = "email" class = "input" name = "email" value = "Email"></div>
         <div class = "centre"><input type = "password" class = "password" name = "password" value = "Password"></div>
         <div class = "centre"><input type = "submit"  class = "button-login btn " value = "LOGIN"></div>
-        <div class="g-signin2 centre" data-onsuccess="onSignIn"></div>
+        <!-- <div class="g-signin2 centre" data-onsuccess="onSignIn"></div> -->
     </form>
 
 
-    <!-- <div id="g_id_onload"
+    <div id="g_id_onload"
     data-client_id="YOUR_GOOGLE_CLIENT_ID"
     data-login_uri="https://kexinhkc-code50-64817956-v6vr5rxp726ggj-3000.githubpreview.dev/home"
     data-auto_prompt="false">
     </div> -->
 
 
-    <!-- <div class="g_id_signin"
+    <div class="g_id_signin"
     data-type="standard"
     data-size="large"
     data-theme="filled_black"
@@ -48,7 +48,7 @@
     data-shape="rectangular"
     data-logo_alignment="center"
     data-width=100>
-    </div> -->
+    </div>
 
     <div class = "centre"><button class = "btn button-createAccount" onclick = "location.href = './createAccount.html'">CREATE ACCOUNT</button></div>
 
