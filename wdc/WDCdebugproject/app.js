@@ -18,6 +18,7 @@ app.use(function(req,res,next){
   next();
 });
 
+let token = req.get('token');
 var decodedHeader = jwt_decode(token, { header: true });
 console.log(decodedHeader);
 
