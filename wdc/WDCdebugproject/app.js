@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const {OAuth2Client} = require('google-auth-library');
 var mysql = require('mysql');
+const jwt_decode = require('jwt-decode');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
