@@ -1,4 +1,4 @@
-CREATE DATABASE eventPlanning;
+-- CREATE DATABASE eventPlanning;
 
 USE eventPlanning;
 
