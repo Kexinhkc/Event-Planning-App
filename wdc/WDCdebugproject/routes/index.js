@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/login.html', function(req, res, next) {
-  // var id = req.credentials;
-  // console.log(id)
+  var id = req.body.credentials;
+  console.log(id)
   res.end();
 });
 
