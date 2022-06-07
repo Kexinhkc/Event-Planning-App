@@ -32,6 +32,7 @@ router.post('/login', function(req, res, next) {
 
           req.pool.getConnection(function(error,connection){
             if(error){
+              console.log("connection error")
               console.log(error);
               res.sendStatus(500);
               return;
@@ -41,6 +42,7 @@ router.post('/login', function(req, res, next) {
             connection.query(query,[email],function(error, rows, fields) {
               connection.release(); // release connection
               if (error) {
+                console.log("query error")
                 console.log(error);
                 res.sendStatus(500);
                 return;
