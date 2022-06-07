@@ -19,8 +19,7 @@ router.post('/login', function(req, res, next) {
       });
       const payload = ticket.getPayload();
       const userid = payload['sub'];
-      // If request specified a G Suite domain:
-      // const domain = payload['hd'];
+      console.log(user.id)
     }
     verify().catch(console.error);
   }
