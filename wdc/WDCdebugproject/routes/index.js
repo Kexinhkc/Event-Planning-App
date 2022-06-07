@@ -54,10 +54,10 @@ router.post('/login', function(req, res, next) {
                 res.sendStatus(401);
               }
 
+              });
             });
-
-          });
-
+          }).catch(function(){
+          res.sendStatus(403)
         });
 
   } else {
