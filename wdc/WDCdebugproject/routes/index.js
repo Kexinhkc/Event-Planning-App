@@ -57,7 +57,7 @@ router.post('/login', function(req, res, next) {
               });
             });
           }).catch(function(){
-          res.sendStatus(403)
+          res.sendStatus(403);
         });
 
   } else {
