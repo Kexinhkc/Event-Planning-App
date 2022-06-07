@@ -12,6 +12,7 @@ router.post('/login', function(req, res, next) {
 
   if ('token' in req.body) {
 
+         console.log("have token")
         let email =null;
         async function verify() {
           const ticket = await client.verifyIdToken({
