@@ -23,6 +23,7 @@ router.post('/login', function(req, res, next) {
           const payload = ticket.getPayload();
           const userid = payload['sub'];
           console.log(userid)
+          email = payload['email'];
           // email = payload['email'];
         }
         // verify().then(function).catch(console.error);//////
