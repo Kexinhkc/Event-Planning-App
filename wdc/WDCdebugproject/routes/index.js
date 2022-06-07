@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'landingPage' });
 });
 
-router.post('/login', function(req, res, next) {
-  // var id = req.body.credentials;
-  // console.log(id)
+router.post('/home.html', function(req, res, next) {
+  var id = req.body.credentials;
+  console.log(id)
   // res.end();
 });
 
