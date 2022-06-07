@@ -10,10 +10,6 @@
 
 function onSignIn(googleUser) {
 
-    // console.log(JSON.stringify(parseJwt(response.credential)));
-
-  //const responsePayload = decodeJwtResponse(response.credential);
-
   var profile = googleUser.getBasicProfile();
   console.log("ID: " + responsePayload.sub);
   console.log('Full Name: ' + responsePayload.name);
@@ -22,8 +18,4 @@ function onSignIn(googleUser) {
   console.log("Image URL: " + responsePayload.picture);
   console.log("Email: " + responsePayload.email);
 
-//     // var xhttp = new XMLHttpRequest();
-//     // xhttp.open('POST', '',true);
-//     // xhttp.setRequestHeader('Content-Type', 'application/json');
-//     // xhttp.send(JSON.stringify('id_token'));
   }
