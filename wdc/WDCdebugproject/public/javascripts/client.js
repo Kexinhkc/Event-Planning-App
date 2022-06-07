@@ -1,4 +1,8 @@
 function onSignIn(response) {
+  
+
+     console.log(JSON.stringify(parseJwt(response.credential)));
+ }
   const responsePayload = decodeJwtResponse(response.credential);
 
   console.log("ID: " + responsePayload.sub);
