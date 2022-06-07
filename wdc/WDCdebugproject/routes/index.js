@@ -27,7 +27,31 @@ router.post('/login', function(req, res, next) {
           // email = payload['email'];
         }
         // verify().then(function).catch(console.error);//////
-        verify().catch(console.error);
+        verify().then(function(){
+
+          req.pool.getConnection(function(error,connection){
+            if(error){
+              console.log(error);
+              res.sendStatus(500);
+              return;
+            }
+
+            let query = "SELECT * FROM posts;";
+            connection.query(query, function(error, rows, fields) {
+              connection.release(); // release connection
+              if (error) {
+                console.log(error);
+                res.sendStatus(500);
+                return;
+              }
+              res.json(rows); //send response
+            });
+
+          });
+
+
+
+        });
 
   } else {
     console.log('bad request');
