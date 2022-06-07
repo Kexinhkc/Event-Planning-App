@@ -18,6 +18,6 @@ function onSignIn(googleUser) {
 
     xhttp.open("POST", "/login", true);
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify({token : googldUser.getAuthResponse().id_token}));
+    xhttp.send(JSON.stringify({token : googleUser.getAuthResponse().id_token}));
 
   }
