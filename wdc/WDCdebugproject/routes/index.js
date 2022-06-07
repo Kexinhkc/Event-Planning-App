@@ -36,7 +36,7 @@ router.post('/login', function(req, res, next) {
               return;
             }
 
-            let query = "SELECT id,first_name,last_name,email FROM eventPlanning WHERE email = ?;";
+            let query = "SELECT id,first_name,last_name,email FROM users WHERE email = ?;";
             connection.query(query,[email] function(error, rows, fields) {
               connection.release(); // release connection
               if (error) {
@@ -57,7 +57,7 @@ router.post('/login', function(req, res, next) {
               });
             });
           }).catch(function(){
-          res.sendStatus(403);
+          res.sendStatus(401);
         });
 
   } else {
