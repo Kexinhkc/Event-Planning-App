@@ -36,8 +36,8 @@ router.post('/login', function(req, res, next) {
               return;
             }
 
-            let query = "SELECT * FROM posts;";
-            connection.query(query, function(error, rows, fields) {
+            let query = "SELECT id,username,email FROM eventPlanning WHERE email = ?;";
+            connection.query(query,[email] function(error, rows, fields) {
               connection.release(); // release connection
               if (error) {
                 console.log(error);
