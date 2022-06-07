@@ -19,7 +19,7 @@ router.post('/login', function(req, res, next) {
       });
       const payload = ticket.getPayload();
       const userid = payload['sub'];
-      console.log(user.id)
+      console.log(userid);
     }
     verify().catch(console.error);
   }
