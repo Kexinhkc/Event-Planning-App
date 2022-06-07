@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const {OAuth2Client} = require('google-auth-library');
 var mysql = require('mysql');
 const jwt_decode = require('jwt-decode');
 
