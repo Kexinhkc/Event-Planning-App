@@ -16,8 +16,6 @@ CREATE TABLE users (
     PRIMARY KEY (users_email)
 );
 
-INSERT INTO users VALUES ("kexin.hkc@gmail.com","123456","Kexin","Huang");
-
 CREATE TABLE events (
     ID INT NOT NULL AUTO_INCREMENT,
     event_name VARCHAR(127),
