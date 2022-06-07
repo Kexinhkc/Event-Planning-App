@@ -50,7 +50,7 @@ router.post('/login', function(req, res, next) {
 
               if (rows.length > 0){
                 console.log('success');
-                req.session.user = row[0];
+                //req.session.user = row[0];
                 res.sendStatus(200);
               }else{
                 console.log('bad login');
