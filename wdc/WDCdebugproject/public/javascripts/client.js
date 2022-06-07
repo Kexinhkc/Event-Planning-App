@@ -8,7 +8,7 @@
 //  return JSON.parse(jsonPayload);
 // };
 
-function onSignIn(response) {
+function onSignIn(googleUser) {
 
     // console.log(JSON.stringify(parseJwt(response.credential)));
 
