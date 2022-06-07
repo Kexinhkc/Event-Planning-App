@@ -44,12 +44,19 @@ router.post('/login', function(req, res, next) {
                 res.sendStatus(500);
                 return;
               }
-              res.json(rows); //send response
+
+              if (rows.length > 0){
+                console.log('success');
+                req.session.user = row[0];
+                res.sendStatus(200);
+              }else{
+                console.log('bad login');
+                res.sendStatus(401);
+              }
+
             });
 
           });
-
-
 
         });
 
