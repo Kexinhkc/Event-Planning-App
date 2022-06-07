@@ -6,7 +6,7 @@ function onSignIn(googleUser) {
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +14,7 @@ function onSignIn(googleUser) {
         }else if (this.readyState == 4 && this.status >= 400){
             alert("Login Failed");
         }
-    }
+    };
 
     xhttp.open("POST", "/login", true);
     xhttp.setRequestHeader("Content-type", "application/json");
