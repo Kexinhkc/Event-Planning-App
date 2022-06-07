@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   if ('token' in req.body) {
 
+        let email =null;
         async function verify() {
           const ticket = await client.verifyIdToken({
               idToken: req.body.token,
