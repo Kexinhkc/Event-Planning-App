@@ -2,14 +2,14 @@
 <html lang = 'en'>
 <head>
 <meta charset = "UTF-8">
-<link rel = "stylesheet" href="stylesheets/project.css">
+<link rel = "stylesheet" href="/stylesheets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>EVENT PLANNER</title>
 </head>
 <body>
     <div id = "icon">
-        <button class = "btn button-home" onclick = "location.href = './welcome.html'">
+        <button class = "btn button-home" onclick = "location.href = './index.html'">
             <i class="fa fa-home"></i>
         </button>
         <button class = "btn button-home" onclick = "location.href = './homeAdmin.html'">
@@ -21,13 +21,13 @@
     </div>
     <div class = "welcome-admin">SEARCH USERS</div>
     <div class = "centre block-search">
-        <input type = "text" id = "search" value = "Users Email">
+        <input type = "text" id = "search" name = "userSearch" value = "Users Email">
         <span class = "icon-search btn">
-        <i class="fa fa-search" onclick = "location.href = './manageUser.html'"></i>
+        <i class="fa fa-search" onclick = "showUser()"></i>
         </span>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="project.js" defer></script>
+    <script src="/javascripts/project.js" defer></script>
 </body>
 </html>
