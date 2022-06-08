@@ -118,7 +118,7 @@ router.post('/adminLogin', function(req, res, next) {
           return;
         }
 
-        let query = "SELECT first_name,last_name,users_email FROM admin WHERE email = ? AND password = ?;";
+        let query = "SELECT email FROM admin WHERE email = ? AND password = ?;";
         connection.query(query,[req.body.email,req.body.password],function(error, rows, fields) {
           connection.release(); // release connection
           if (error) {
@@ -167,7 +167,7 @@ router.post('/adminLogin', function(req, res, next) {
               return;
             }
 
-            let query = "SELECT first_name,last_name,users_email FROM admin WHERE email = ?;";
+            let query = "SELECT email FROM admin WHERE email = ?;";
             connection.query(query,[email],function(error, rows, fields) {
               connection.release(); // release connection
               if (error) {
