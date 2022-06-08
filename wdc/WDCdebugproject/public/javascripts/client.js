@@ -1,10 +1,6 @@
 
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
-    // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    // console.log('Name: ' + profile.getName());
-    // console.log('Image URL: ' + profile.getImageUrl());
-    // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
     let xhttp = new XMLHttpRequest();
 
@@ -25,7 +21,7 @@ function onSignIn(googleUser) {
 
 
 
-  function login() {
+function login() {
 
     console.log("inside login()");
 
@@ -100,3 +96,34 @@ function onSignIn(googleUser) {
 
   }
 
+
+
+
+  function createAccount() {
+
+    // console.log("inside login()");
+
+    let user={
+        email:document.getElementById('email').value,
+        password:document.getElementById('password').value,
+        first_name:document.getElementById('first_name').value,
+        last_name:document.getElementById('last_name').value,
+        //token: localStorage.getItem('token')
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Account Created Successfully");
+           window.location.replace("home.html");
+        }else if (this.readyState == 4 && this.status >= 400){
+            alert("Failed to Create Account");
+        }
+    };
+
+    xhttp.open("POST", "/userAccount",true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user));
+
+  }
