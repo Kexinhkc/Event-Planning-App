@@ -2,8 +2,13 @@
 <html lang = 'en'>
 <head>
 <meta charset = "UTF-8">
+<title>ADMIN LOGIN</title>
+<!-- stylesheets and js -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="project.js" defer></script>
 <link rel = "stylesheet" href="stylesheets/project.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- google icons and fonts -->
 <script src="https://kit.fontawesome.com/d16385a085.js" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +16,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<title>EVENT PLANNER</title>
+
+<!-- google log in -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="1006345318538-06u5fqd3sur2bthaea307jtjalc33f3r.apps.googleusercontent.com">
+<meta name="google-signin-plugin_name" content="APP">
 </head>
+
 <body>
 
     <div id = "icon">
@@ -25,17 +35,10 @@
     </div>
     <div class = "login-admin">ADMIN LOGIN</div>
 
-    <div class = "centre">
-    <input type = "email" class = "input" value = "Email">
-    </div>
-    <div class = "centre">
-    <input type = "password" class = "input" value = "Password">
-    </div>
-    <div class = "centre">
-    <button class = "button-login btn " onclick = "location.href = './homeAdmin.html'">LOGIN</button>
-    </div>
+    <div class = "centre"><input type = "email" id="email" class = "input" value = "Email"></div>
+    <div class = "centre"><input type = "password" id="password" class = "input" value = "Password"></div>
+    <div class = "centre"><button class = "button-login btn " onclick = "adminLogin()">LOGIN</button></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="project.js" defer></script>
+
 </body>
 </html>
