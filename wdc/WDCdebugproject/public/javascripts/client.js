@@ -11,7 +11,7 @@ function onSignIn(googleUser) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("Login Successfully");
-           window.location.replace("https://kexinhkc-code50-64817956-v6vr5rxp726ggj-8080.githubpreview.dev/home.html");
+           window.location.replace("home.html");
            //window.location = 'https://kexinhkc-code50-64817956-v6vr5rxp726ggj-8080.githubpreview.dev/home.html';
         }else if (this.readyState == 4 && this.status >= 400){
             alert("Login Failed");
