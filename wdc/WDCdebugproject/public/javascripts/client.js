@@ -24,10 +24,10 @@ function onSignIn(googleUser) {
   }
 
 
-  
+
   function login() {
 
-    console.log("inside login()")
+    console.log("inside login()");
 
     let user={
         email:document.getElementById('email').value,
