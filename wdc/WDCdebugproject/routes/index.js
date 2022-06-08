@@ -40,6 +40,7 @@ router.post('/login', function(req, res, next) {
           }
 
           });
+        });
 
         // if(req.body.email in users && users[req.body.email].password === req.body.password){
         //   console.log('success with password');
