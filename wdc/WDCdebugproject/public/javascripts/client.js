@@ -77,7 +77,6 @@ function onSignIn(googleUser) {
   }
 
 
-
   function adminLogin() {
 
     console.log("inside login()");
