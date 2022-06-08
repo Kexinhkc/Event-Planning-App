@@ -20,8 +20,8 @@ router.post('/login', function(req, res, next) {
           return;
         }
 
-        let query = "SELECT first_name,last_name,users_email FROM users WHERE users_email = ?;";
-        connection.query(query,[email],function(error, rows, fields) {
+        let query = "SELECT first_name,last_name,users_email FROM users WHERE users_email = ? AND password = ?;";
+        connection.query(query,[req.body.email,req.body.password],function(error, rows, fields) {
           connection.release(); // release connection
           if (error) {
             console.log("query error")
