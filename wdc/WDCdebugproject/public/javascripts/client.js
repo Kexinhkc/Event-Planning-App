@@ -12,7 +12,7 @@ function onSignIn(googleUser) {
         if (this.readyState == 4 && this.status == 200) {
             alert("Login Successfully");
            // window.location.replace("public/home.html");
-            window.location.href = "/public/home.html";
+           window.location = '/public/home.html';
         }else if (this.readyState == 4 && this.status >= 400){
             alert("Login Failed");
         }
