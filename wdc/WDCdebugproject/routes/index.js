@@ -218,7 +218,8 @@ router.post('/userAccount', function(req, res, next) {
 
         console.log("connected to database")
         let query = "INSERT INTO users VALUES (?,?,?,?);";
-        connection.query(query,[req.body.email, req.body.password, req.body.first_name, req.body.last_name],function(error, rows, fields) {
+        connection.query(query,[req.body.email, req.body.password, req.body.last_name, req.body.first_name],function(error, rows, fields) {
+
           connection.release(); // release connection
           if (error) {
             console.log("query error")
@@ -284,7 +285,7 @@ router.post('/userAccount', function(req, res, next) {
   //       });
 
   } else {
-    console.log('bad request');
+    console.log('bad request because no email and ');
     res.sendStatus(400);
   }
 
