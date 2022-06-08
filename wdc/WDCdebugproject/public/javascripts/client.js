@@ -22,3 +22,23 @@ function onSignIn(googleUser) {
     xhttp.send(JSON.stringify({token : googleUser.getAuthResponse().id_token}));
 
   }
+
+  function login() {
+    var profile = googleUser.getBasicProfile();
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Login Successfully");
+           window.location.replace("home.html");
+        }else if (this.readyState == 4 && this.status >= 400){
+            alert("Login Failed");
+        }
+    };
+
+    xhttp.open("POST", "/login");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({token : googleUser.getAuthResponse().id_token}));
+
+  }
