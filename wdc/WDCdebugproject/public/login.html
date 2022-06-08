@@ -37,8 +37,8 @@
     <form action="login" method="post">
         <div class = "centre"><input type = "email" class = "input" name = "email" value = "Email"></div>
         <div class = "centre"><input type = "password" class = "password" name = "password" value = "Password"></div>
-        <div class = "centre"><input type = "submit"  class = "button-login btn " value = "LOGIN"></div>
-        <div class="g-signin2 centre" data-onsuccess="onSignIn"></div>
+        <div class = "centre"><input type = "submit"  class = "button-login btn " value = "LOGIN" v-on:click="handler"></div>
+        <div class="g-signin2 centre" data-onsuccess="onSignIn" ></div>
     </form>
 
 
