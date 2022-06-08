@@ -214,8 +214,8 @@ router.post('/userAccount', function(req, res, next) {
           return;
         }
 
-        let query = "INSERT INTO users VALUES ()FROM admin WHERE email = ? AND password = ?;";
-        connection.query(query,[req.body.email,req.body.password],function(error, rows, fields) {
+        let query = "INSERT INTO users VALUES (?,?,?,?);";
+        connection.query(query,[req.body.email,req.body.password,req.body.first_name,req.body.last_name],function(error, rows, fields) {
           connection.release(); // release connection
           if (error) {
             console.log("query error")
@@ -224,14 +224,7 @@ router.post('/userAccount', function(req, res, next) {
             return;
           }
 
-          if (rows.length > 0){
-            console.log('success');
-            //req.session.user = row[0];
-            res.sendStatus(200);
-          }else{
-            console.log('bad login');
-            res.sendStatus(401);
-          }
+         
 
           });
         });
