@@ -12,6 +12,14 @@ router.post('/login', function(req, res, next) {
 
   if ('email' in req.body && 'password' in req.body) {
 
+      req.pool.getConnection(function(error,connection){
+        if(error){
+          console.log("connection error")
+          console.log(error);
+          res.sendStatus(500);
+          return;
+        }
+
         if(req.body.email in users && users[req.body.email].password === req.body.password){
           console.log('success with password');
           //req.session.user = users[req.body.username];
