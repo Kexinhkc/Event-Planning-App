@@ -223,7 +223,7 @@ router.post('/userAccount', function(req, res, next) {
             res.sendStatus(500);
             return;
           }
-            res.end();
+            res.sendStatus(200);
 
           });
         });
