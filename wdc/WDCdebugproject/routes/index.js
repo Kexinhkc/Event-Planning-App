@@ -10,9 +10,19 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', function(req, res, next) {
 
-  if ('token' in req.body) {
+  if ('email' in req.body && 'password' in req.body) {
 
-         console.log("have token")
+        if(req.body.email in users && users[req.body.email].password === req.body.password){
+          console.log('success');
+          //req.session.user = users[req.body.username];
+          res.sendStatus(200);
+        } else {
+          console.log('bad login');
+          res.sendStatus(401);
+        }
+
+  }else if ('token' in req.body) {
+
         let email =null;
         async function verify() {
           const ticket = await client.verifyIdToken({
