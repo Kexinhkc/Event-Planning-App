@@ -8,6 +8,8 @@ CREATE TABLE admin (
     PRIMARY KEY (email)
 );
 
+INSERT INTO admin VALUES ("sciencenut2000@gmail.com", "234567");
+
 CREATE TABLE users (
     users_email VARCHAR(127) UNIQUE,
     password VARCHAR(127),
