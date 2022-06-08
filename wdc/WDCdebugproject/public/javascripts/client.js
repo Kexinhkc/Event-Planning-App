@@ -46,8 +46,9 @@ function onSignIn(googleUser) {
         }
     };
 
-    xhttp.open("POST", "/login");
+    xhttp.open("POST", "/login",true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(user));
 
   }
+
