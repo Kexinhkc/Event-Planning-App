@@ -285,7 +285,7 @@ router.post('/userAccount', function(req, res, next) {
   //       });
 
   } else {
-    console.log('bad request because no email and ');
+    console.log('bad request because no email and password');
     res.sendStatus(400);
   }
 
