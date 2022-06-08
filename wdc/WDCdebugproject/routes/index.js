@@ -206,6 +206,8 @@ router.post('/userAccount', function(req, res, next) {
 
   if ('email' in req.body && 'password' in req.body) {
 
+    console.log("in the route")
+
       req.pool.getConnection(function(error,connection){
         if(error){
           console.log("connection error")
@@ -214,6 +216,7 @@ router.post('/userAccount', function(req, res, next) {
           return;
         }
 
+        console.log("connected to database")
         let query = "INSERT INTO users VALUES (?,?,?,?);";
         connection.query(query,[req.body.email,req.body.password,req.body.first_name,req.body.last_name],function(error, rows, fields) {
           connection.release(); // release connection
@@ -228,7 +231,7 @@ router.post('/userAccount', function(req, res, next) {
           });
         });
 
-   } //else if ('token' in req.body) {
+  // } //else if ('token' in req.body) {
 
   //       let email =null;
   //       async function verify() {
@@ -280,10 +283,10 @@ router.post('/userAccount', function(req, res, next) {
   //         res.sendStatus(401);
   //       });
 
-  // } else {
-  //   console.log('bad request');
-  //   res.sendStatus(400);
-  // }
+  } else {
+    console.log('bad request');
+    res.sendStatus(400);
+  }
 
 });
 
