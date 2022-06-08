@@ -24,7 +24,12 @@ function onSignIn(googleUser) {
   }
 
   function login() {
-    var profile = googleUser.getBasicProfile();
+
+    let user={
+        user:document.getElementById('email').value,
+        pass:document.getElementById('password').value,
+        //token: localStorage.getItem('token')
+    };
 
     let xhttp = new XMLHttpRequest();
 
@@ -39,6 +44,6 @@ function onSignIn(googleUser) {
 
     xhttp.open("POST", "/login");
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify({token : googleUser.getAuthResponse().id_token}));
+    xhttp.send(JSON.stringify(user));
 
   }
