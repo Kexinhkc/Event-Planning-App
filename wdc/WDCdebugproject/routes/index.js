@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', function(req, res, next) {
 
+  console.log("inside route")
+
   if ('email' in req.body && 'password' in req.body) {
 
       req.pool.getConnection(function(error,connection){

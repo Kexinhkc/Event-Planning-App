@@ -25,6 +25,8 @@ function onSignIn(googleUser) {
 
   function login() {
 
+    console.log("inside login()")
+
     let user={
         email:document.getElementById('email').value,
         password:document.getElementById('password').value,
