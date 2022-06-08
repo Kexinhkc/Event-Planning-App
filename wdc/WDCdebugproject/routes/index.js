@@ -20,14 +20,35 @@ router.post('/login', function(req, res, next) {
           return;
         }
 
-        if(req.body.email in users && users[req.body.email].password === req.body.password){
-          console.log('success with password');
-          //req.session.user = users[req.body.username];
-          res.sendStatus(200);
-        } else {
-          console.log('bad login with password');
-          res.sendStatus(401);
-        }
+        let query = "SELECT first_name,last_name,users_email FROM users WHERE users_email = ?;";
+        connection.query(query,[email],function(error, rows, fields) {
+          connection.release(); // release connection
+          if (error) {
+            console.log("query error")
+            console.log(error);
+            res.sendStatus(500);
+            return;
+          }
+
+          if (rows.length > 0){
+            console.log('success');
+            //req.session.user = row[0];
+            res.sendStatus(200);
+          }else{
+            console.log('bad login');
+            res.sendStatus(401);
+          }
+
+          });
+
+        // if(req.body.email in users && users[req.body.email].password === req.body.password){
+        //   console.log('success with password');
+        //   //req.session.user = users[req.body.username];
+        //   res.sendStatus(200);
+        // } else {
+        //   console.log('bad login with password');
+        //   res.sendStatus(401);
+        // }
 
   }else if ('token' in req.body) {
 
