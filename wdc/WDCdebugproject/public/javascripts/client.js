@@ -26,8 +26,8 @@ function onSignIn(googleUser) {
   function login() {
 
     let user={
-        user:document.getElementById('email').value,
-        pass:document.getElementById('password').value,
+        email:document.getElementById('email').value,
+        password:document.getElementById('password').value,
         //token: localStorage.getItem('token')
     };
 
