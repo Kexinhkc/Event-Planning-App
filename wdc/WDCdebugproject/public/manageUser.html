@@ -2,14 +2,14 @@
 <html lang = 'en'>
 <head>
 <meta charset = "UTF-8">
-<link rel = "stylesheet" href="stylesheets/project.css">
+<link rel = "stylesheet" href="/stylesheets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>EVENT PLANNER</title>
 </head>
-<body>
+<body onload = "loadUser()">
     <div id = "icon">
-        <button class = "btn button-home" onclick = "location.href = './welcome.html'">
+        <button class = "btn button-home" onclick = "location.href = './index.html'">
             <i class="fa fa-home"></i>
         </button>
         <button class = "btn button-home" onclick = "location.href = './homeAdmin.html'">
@@ -22,25 +22,25 @@
     <div class = "createAccount" style = "font-weight: bold;">USER PROFILE</div>
     <hr>
     <div class = "centre">
-    <input type = "email" class = "input" value = "Email">
+    <input type = "email" class = "input" name = "input-email" value = "Email">
     </div>
     <div class = "centre">
-    <input type = "password" class = "input" value = "Password">
+    <input type = "password" class = "input" name = "input-password" value = "Password">
     </div>
     <div class = "centre">
-        <input type = "text" class = "input" value = "First Name">
+        <input type = "text" class = "input" name = "input-first" value = "First Name">
     </div>
         <div class = "centre">
-            <input type = "text" class = "input" value = "Last Name">
+            <input type = "text" class = "input" name = "input-last" value = "Last Name">
         </div>
         <div class = "centre">
-            <button class = "button-login btn">EDIT</button>
+            <button class = "button-login btn" onclick = "modifyUser()">EDIT</button>
         </div>
         <div class = "centre">
-            <button class = "button-delete btn">DELETE USER</button>
+            <button class = "button-delete btn" onclick = "deleteUser()">DELETE USER</button>
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="project.js" defer></script>
+    <script src="/javascripts/project.js" defer></script>
 </body>
 </html>
