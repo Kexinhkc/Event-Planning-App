@@ -543,29 +543,6 @@ router.post('/createEvents', function (req, res, next) {
   });
 });
 
-router.get('/profile', function (req, res, next) {
-  //Connect to the database
-  req.pool.getConnection( function(err,connection) {
-    if (err) {
-      res.sendStatus(500);
-      console.log(err);
-      return;
-    }
-
-    var query = "SELECT * FROM users WHERE password = ?, first_name = ?, last_name = ? WHERE email = ?;";
-
-    connection.query(query, [req.query.password,req.query.first_name,req.query.last_name,req.query.email], function (err, rows, fields) {
-      connection.release(); // release connection
-      if (err) {
-        res.sendStatus(500);
-        console.log(err);
-        return;
-      }
-      res.sendStatus(200);
-    });
-  });
-});
-
 router.post('/userEvents', function (req, res, next) {
   //Connect to the database
   req.pool.getConnection( function(err,connection) {
