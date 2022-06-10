@@ -430,7 +430,50 @@ router.post('/deleteEvents', function (req, res, next) {
   });
 });
 
+router.post('/createAdmins', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
 
+    var query = "INSERT INTO admin VALUES (?, ?);";
+    console.log(req.body);
+    connection.query(query, [req.body.email,req.body.password], function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+router.get('/showTime', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
+
+    var query = "SELECT timestamp, Count(timestamp) as times FROM availaility GROUP BY timestamp ORDER BY times DESC LIMIT 1;";
+    connection.query(query, function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.json(rows[0]);
+    });
+  });
+});
 
 
 module.exports = router;
