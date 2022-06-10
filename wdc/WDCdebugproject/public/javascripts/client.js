@@ -60,13 +60,14 @@ function onSignIn(googleUser) {
 
   ////////////////////////////////////////////////////////////////////////////////
   function signOut() {
-     console.log('User signed out.');
+
   // if(gapi && gapi.auth2){
 
   // }
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
 
+     console.log('User signed out.');
     let xhttp = new XMLHttpRequest();
 
      xhttp.onreadystatechange = function () {
