@@ -603,8 +603,8 @@ router.get('/profile', (req, res, next) => {
            res.sendStatus(500);
            return;
          }
-         var query = "SELECT * FROM users WHERE email = '"+email+"';";
-         connection.query(query, function(err, rows, fields) {
+         var query = "SELECT * FROM users WHERE email = ?;";
+         connection.query(query, [email], function(err, rows, fields) {
          connection.release(); // release connection
 
        //   if (err)
