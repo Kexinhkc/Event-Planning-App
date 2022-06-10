@@ -1,3 +1,41 @@
+var project = new Vue({
+
+  el: '#vue',
+  data: {
+    search_user : ''
+  },
+
+  methods: {
+
+showUser: function()
+{
+    let users = {
+        email: project.search_user
+        //document.getElementsByName("userSearch")[0].value
+      };
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.response);
+            console.log(obj);
+            alert("search Successful");
+            window.location.replace(`./manageUser.html?email=${obj.email}&last_name=${obj.last_name}&first_name=${obj.first_name}&password=${obj.password}`);
+        }
+      };
+      xhttp.open("POST", "/searchUsers");
+      // Set content type to JSON
+      xhttp.setRequestHeader("Content-type", "application/json");
+      // Send request
+      xhttp.send(JSON.stringify(users));
+}
+  }
+
+})
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+
 
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
