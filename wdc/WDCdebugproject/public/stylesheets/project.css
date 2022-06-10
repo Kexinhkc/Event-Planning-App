@@ -147,6 +147,9 @@
 
 .g-signin2 {
     display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    float:right
 }
 
 #Description{
