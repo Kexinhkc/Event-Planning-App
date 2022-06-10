@@ -58,28 +58,28 @@ function onSignIn(googleUser) {
   }
 
   ////////////////////////////////////////////////////////////////////////////////
-  function signOut() {
-    console.log('User signed out.');
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
+  // function signOut() {
+  //   console.log('User signed out.');
+  //   var auth2 = gapi.auth2.getAuthInstance();
+  //   auth2.signOut().then(function () {
 
-      let xhttp = new XMLHttpRequest();
+  //     let xhttp = new XMLHttpRequest();
 
-      xhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-              alert("User Successully Signed Out");
-             window.location.replace("index.html");
-          }else if (this.readyState == 4 && this.status >= 400){
-              alert("User Signed Out Failed");
-          }
-      };
+  //     xhttp.onreadystatechange = function () {
+  //         if (this.readyState == 4 && this.status == 200) {
+  //             alert("User Successully Signed Out");
+  //            window.location.replace("index.html");
+  //         }else if (this.readyState == 4 && this.status >= 400){
+  //             alert("User Signed Out Failed");
+  //         }
+  //     };
 
-      xhttp.open("POST", "/logout");
+  //     xhttp.open("POST", "/logout");
 
-      xhttp.send();
+  //     xhttp.send();
 
-    });
-  }
+  //   });
+  // }
 
 ////////////////////////////////////////////////////////////////////////////////
 function login() {
