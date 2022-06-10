@@ -48,6 +48,11 @@
     cursor: pointer;
 }
 
+.signout{
+    float:right;
+    margin-top:0px;
+}
+
 .button-login
 {
     background-color: black;
