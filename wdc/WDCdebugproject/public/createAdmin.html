@@ -2,35 +2,36 @@
 <html lang = 'en'>
 <head>
 <meta charset = "UTF-8">
-<link rel = "stylesheet" href="stylesheets/project.css">
+<link rel = "stylesheet" href="/stylesheets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>EVENT PLANNER</title>
 </head>
 <body>
     <div id = "icon">
-        <span class = "btn button-home" onclick = "location.href = './homeAdmin.html'">
+        <button class = "btn button-home" onclick = "location.href = './index.html'">
             <i class="fa fa-home"></i>
-        </span>
-
-        <span class = "btn button-home" onclick = "location.href = './login.html'">
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './homeAdmin.html'">
+            <i class="fa fa-navicon"></i>
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './loginAdmin.html'">
             <i class="fa fa-user-o"></i>
-          </span>
- <!-- need a sign out -->
+        </button>
     </div>
     <div class = "createAccount">CREATE ADMIN</div>
     <hr>
     <div class = "centre">
-    <input type = "email" class = "input" value = "Email">
+    <input type = "email" class = "input" name = "input-admin-email" value = "Email">
     </div>
     <div class = "centre">
-    <input type = "password" class = "input" value = "Password">
+    <input type = "password" class = "input" name = "input-admin-password" value = "Password">
     </div>
     <div class = "centre">
-    <button class = "button-login btn">CONFIRM</button>
+    <button class = "button-login btn" onclick = "createAdmin()">ADD</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="/javascript/client.js" defer></script>
+    <script src="/javascripts/client.js" defer></script>
 </body>
 </html>

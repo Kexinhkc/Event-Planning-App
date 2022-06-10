@@ -2,52 +2,43 @@
 <html lang = 'en'>
 <head>
 <meta charset = "UTF-8">
-<link rel = "stylesheet" href="stylesheets/project.css">
+<link rel = "stylesheet" href="/stylesheets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>EVENT PLANNER</title>
 </head>
 <body>
-
     <div id = "icon">
-        <span class = "btn button-home" onclick = "location.href = './index.html'">
+        <button class = "btn button-home" onclick = "location.href = './index.html'">
             <i class="fa fa-home"></i>
-        </span>
-
-        <span class = "btn button-home" onclick = "location.href = './home.html'">
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './home.html'">
             <i class="fa fa-calendar"></i>
-        </span>
-
-        <span class = "btn button-home" onclick = "location.href = './profile.html'">
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './profile.html'">
         <i class="fa fa-address-card-o"></i>
-        </span>
-
-          <span class = "btn button-home" onclick = "location.href = './login.html'">
-            <i class="fa fa-user-o"></i>
-          </span>
-
+        </button>
+        <button class = "btn button-home" onclick = "location.href = './login.html'">
+        <i class="fa fa-user-circle"></i>
+        </button>
     </div>
-
     <div class = "createAccount">CREATE EVENT</div>
     <hr>
     <div class = "centre">
-    <input type = "text" class = "input" value = "Event Name">
+    <input type = "text" class = "input" name = "eventName" value = "Event Name">
     </div>
     <div class = "centre">
-        <input type = "Date" id = "date">
-        </div>
-    <div class = "centre">
-    <input type = "text" id = "Description" value = "Description">
+    <input type = "text" id = "Description" name = "eventD" value = "Description">
     </div>
     <div class = "centre gap">
         <input type = "radio" class = "notification">
         SENT NOTIFICATION
     </div>
     <div class = "centre">
-    <button class = "button-create btn" onclick = "location.href = './home.html'">CREATE</button>
+    <button class = "button-create btn" onclick = "createNewEvent()">CREATE</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="project.js" defer></script>
+    <script src="/javascripts/client.js" defer></script>
 </body>
 </html>
