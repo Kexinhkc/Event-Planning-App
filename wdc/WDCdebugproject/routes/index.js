@@ -597,14 +597,15 @@ router.get('/profile', (req, res, next) => {
   }
   else
   {
-  email = req.session.user;
+    email = req.session.user;
+    console.log(email);
   req.pool.getConnection( function(err,connection) {
          if (err) {
            res.sendStatus(500);
            return;
          }
          var query = "SELECT * FROM users WHERE email = ?;";
-         connection.query(query, [email], function(err, rows, fields) {
+         connection.query(query, [req.session.user], function(err, rows, fields) {
          connection.release(); // release connection
 
        //   if (err)
