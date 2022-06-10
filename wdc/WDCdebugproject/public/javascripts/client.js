@@ -302,6 +302,7 @@ function loadEvent()
 {
   const urlParams = new URLSearchParams(window.location.search);
   document.getElementsByName("input-event")[0].value = urlParams.get('event_name');
+  document.getElementsByName("admin-event-ID")[0].value = urlParams.get('ID');
   document.getElementsByName("input-d")[0].value = urlParams.get('description');
 }
 
