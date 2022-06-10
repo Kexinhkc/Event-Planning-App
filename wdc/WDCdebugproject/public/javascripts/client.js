@@ -44,6 +44,7 @@ function onSignIn(googleUser) {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+          isGoogleLogIn= true
             alert("Login Successfully");
            window.location.replace("home.html");
         }else if (this.readyState == 4 && this.status >= 400){
