@@ -301,6 +301,15 @@ router.post('/userAccount', function(req, res, next) {
 
 });
 
+////////////////////////////////////////////////////////////////////////////////
+router.post('/logout', function(req, res, next) {
+  if('user' in req.session){
+    delete req.session.user;
+  }
+  res.end();
+
+});
+
 
 
 
