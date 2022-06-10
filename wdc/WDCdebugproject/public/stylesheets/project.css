@@ -12,6 +12,16 @@
     text-align: center;
 }
 
+.g-signin2 {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1%;
+    float:right;
+    top: -10px;
+
+}
+
 .button{
     background-color: black;
     color : white;
@@ -36,17 +46,6 @@
 
 .btn{
     cursor: pointer;
-}
-
-.enterAsAdmin{
-    bottom: 10px;
-}
-
-.g-signin2{
-    margin:auto;
-    text-align: center;
-    margin-left:45.5%;
-    margin-top:2%;
 }
 
 .button-login
@@ -96,8 +95,6 @@
     font-size: 2vh;
     margin-top: 0.5cm;
     margin-bottom: 0.5cm;
-    bottom: 0px;
-
 
 }
 
@@ -138,20 +135,6 @@
 
 .button-home{
     font-size: 20px;
-    border: #FFFFFF;
-
-    margin-left: 5px;
-    margin-right: 5px;
-
-}
-
-.g-signin2 {
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 1%;
-    float:right;
-    top: -10px;
 
 }
 
@@ -217,6 +200,12 @@
     margin-top: 1cm;
     width:6cm;
     height: 2cm;
+    font-size: 0.5cm;
+}
+
+.button-email{
+    background-color: black;
+    color : #FFFFFF;
     font-size: 0.5cm;
 }
 
@@ -300,4 +289,14 @@
     text-align: center;
 
     margin-top: 3%;
+}
+
+.email
+{
+    background-color: black;
+    color: grey;
+    width: 10cm;
+    height: 1cm;
+    font-size: 0.5cm;
+    text-align: center;
 }
