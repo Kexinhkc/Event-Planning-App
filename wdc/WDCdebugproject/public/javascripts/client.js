@@ -236,7 +236,7 @@ function showEvent()
         var obj = JSON.parse(this.response);
         console.log(obj);
         alert("search Successful");
-        window.location.replace(`./manageEvent.html?event_name=${obj.event_name}&description=${obj.description}`);
+        window.location.replace(`./manageEvent.html?event_name=${obj.event_name}&description=${obj.description}&ID=${obj.ID}`);
 
     }
   };
