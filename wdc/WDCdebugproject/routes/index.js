@@ -140,7 +140,7 @@ router.post('/adminLogin', function(req, res, next) {
 
           if (rows.length > 0){
             console.log('success');
-            //req.session.user = row[0];
+            req.session.user = req.body.email;
             res.sendStatus(200);
           }else{
             console.log('bad login');
@@ -189,7 +189,7 @@ router.post('/adminLogin', function(req, res, next) {
 
               if (rows.length > 0){
                 console.log('success');
-                //req.session.user = row[0];
+                req.session.user = req.body.email;
                 res.sendStatus(200);
               }else{
                 console.log('bad login');
@@ -236,6 +236,7 @@ router.post('/userAccount', function(req, res, next) {
             res.sendStatus(500);
             return;
           }
+           req.session.user = req.body.email;
             res.sendStatus(200);
 
           });
