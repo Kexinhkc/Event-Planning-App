@@ -570,6 +570,7 @@ router.get('/profile', (req, res, next) => {
   if(!('user' in req.session))
   {
     res.sendstatus(500);
+    alert("user has not logged");
     return;
   }
   else
