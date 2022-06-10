@@ -494,5 +494,96 @@ router.get('/showTime', function (req, res, next) {
   });
 });
 
+router.post('/collectTimes', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
+
+    var query = "INSERT INTO availaility VALUES (?, ?);";
+    console.log(req.body);
+    connection.query(query, [req.body.date,req.body.id], function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+router.post('/createEvents', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
+
+    var query = "INSERT INTO events VALUES (NULL, ?, ?);";
+    console.log(req.body);
+    connection.query(query, [req.body.name,req.body.d], function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+router.get('/profile', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
+
+    var query = "SELECT * FROM users WHERE password = ?, first_name = ?, last_name = ? WHERE email = ?;";
+
+    connection.query(query, [req.query.password,req.query.first_name,req.query.last_name,req.query.email], function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+router.post('/userEvents', function (req, res, next) {
+  //Connect to the database
+  req.pool.getConnection( function(err,connection) {
+    if (err) {
+      res.sendStatus(500);
+      console.log(err);
+      return;
+    }
+
+    var query = "SELECT * FROM events WHERE event_name = ?;";
+    connection.query(query, [req.body.event_name], function (err, rows, fields) {
+      connection.release(); // release connection
+      if (err) {
+        res.sendStatus(500);
+        console.log(err);
+        return;
+      }
+      res.json(rows[0]);
+    });
+  });
+});
 
 module.exports = router;
+
