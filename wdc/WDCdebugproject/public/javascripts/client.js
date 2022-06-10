@@ -458,33 +458,6 @@ function loadUserEvent()
   document.getElementsByName("user-event-d")[0].value = urlParams.get('description');
 }
 
-router.get('/profile', (req, res, next) => {
-  if(!('email' in req.session))
-  {
-    res.sendstatus(500);
-    return;
-  }
-  else
-  {
-  email = req.session.email;
-  req.pool.getConnection( function(err,connection) {
-         if (err) {
-           res.sendStatus(500);
-           return;
-         }
-         var query = "SELECT * FROM users WHERE email = '"+email+"';";
-         connection.query(query, function(err, rows, fields) {
-         connection.release(); // release connection
-
-       //   if (err)
-       //   {
-       //     res.send('1');
-       //   }
-           res.json(rows[0]);
-         });
-     });
-  }
-});
 
 function loadProfile()
 {
