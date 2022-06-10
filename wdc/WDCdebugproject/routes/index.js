@@ -306,8 +306,8 @@ router.post('/logout', function(req, res, next) {
   console.log("log out routes");
 
   if('user' in req.session){
-    // delete req.session.user;
-    req.session.destroy();
+     delete req.session.user;
+   // req.session.destroy();
   }
   res.end();
 
