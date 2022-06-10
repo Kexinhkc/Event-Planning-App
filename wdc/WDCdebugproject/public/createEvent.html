@@ -31,8 +31,30 @@
     <input type = "text" id = "Description" name = "eventD" value = "Description">
     </div>
     <div class = "centre gap">
-        <input type = "radio" class = "notification">
-        SENT NOTIFICATION
+        <!-- <input type = "radio" class = "notification">
+        SENT NOTIFICATION -->
+        <form action="https://getform.io/f/befab669-814b-40c8-a88c-db5741037a2a" method="POST">
+            <div class = "centre">
+            <input type="email" class = "email" name="email" placeholder = "Enter email here...">
+            </div>
+            <div>
+            <input type="text"  class = "email" name="message"placeholder = "Enter event details here...">
+            </div>
+            <!-- checkbox handle
+            <input type="checkbox" name="subscribe" value="yes" checked>
+            <input type="hidden" name="subscribe" value="no">
+            <!-- radio button handle -->
+            <!-- <input type="radio" name="gender" value="male" checked>
+            <input type="radio" name="gender" value="female">
+            <input type="radio" name="gender" value="other"> -->
+            <!-- select field handle -->
+            <!-- <select name="work-experience">
+                <option value="one-year">0-1 years</option>
+                <option value="one-five-years">1-5 years</option>
+                <option value="five-plus-years">5+ years</option>
+            </select> -->
+            <button class = "button-email" type="submit">Send Notification</button>
+        </form>
     </div>
     <div class = "centre">
     <button class = "button-create btn" onclick = "createNewEvent()">CREATE</button>
