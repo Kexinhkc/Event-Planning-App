@@ -145,6 +145,10 @@
 
 }
 
+.g-signin2 {
+    display: inline-block;
+}
+
 #Description{
     background-color: black;
     color: grey;
