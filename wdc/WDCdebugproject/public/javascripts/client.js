@@ -185,7 +185,7 @@ function login() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("Account Created Successfully");
-           window.location.replace("home.html");
+           window.location.replace("createEvent.html");
         }else if (this.readyState == 4 && this.status >= 400){
             alert("Failed to Create Account");
         }
