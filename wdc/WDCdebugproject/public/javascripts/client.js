@@ -61,13 +61,14 @@ function onSignIn(googleUser) {
   ////////////////////////////////////////////////////////////////////////////////
   function signOut() {
 
-  // if(gapi && gapi.auth2){
-
-  // }
+  try {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
+      console.log('Signed out of Google');
+     });
 
-     console.log('User signed out.');
+    } catch (error){}
+
     let xhttp = new XMLHttpRequest();
 
      xhttp.onreadystatechange = function () {
@@ -83,8 +84,8 @@ function onSignIn(googleUser) {
 
       xhttp.send();
 
-    });
-  }
+    }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 function login() {
