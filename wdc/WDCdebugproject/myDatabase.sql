@@ -31,7 +31,7 @@ CREATE TABLE creating_trip (
 );
 
 CREATE TABLE availaility (
-    timestamp DATETIME,
+    timestamp VARCHAR(63),
     event_ID INT,
     FOREIGN KEY (event_ID) REFERENCES events(ID) ON DELETE CASCADE
 );
