@@ -106,6 +106,15 @@ router.post('/login', function(req, res, next) {
 });
 
 ////////////////////////////////////////////////////////////////////////////////
+router.get('/test', function(req, res, next) {
+  if('user' in req.session){
+    res.json(req.session.user);
+  } else {
+    res.send('This is a test');
+  }
+});
+
+////////////////////////////////////////////////////////////////////////////////
 
 router.post('/adminLogin', function(req, res, next) {
 
