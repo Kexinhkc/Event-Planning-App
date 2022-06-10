@@ -74,9 +74,9 @@ function onSignIn(googleUser) {
       };
 
       xhttp.open("POST", "/logout");
-      xhttp.setRequestHeader("Content-type", "application/json");
-      xhttp.send(JSON.stringify({token : googleUser.getAuthResponse().id_token}));
-     
+
+      xhttp.send();
+
     });
   }
 
