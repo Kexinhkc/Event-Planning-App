@@ -457,3 +457,50 @@ function loadUserEvent()
   document.getElementsByName("user-event-ID")[0].value = urlParams.get('ID');
   document.getElementsByName("user-event-d")[0].value = urlParams.get('description');
 }
+
+router.get('/profile', (req, res, next) => {
+  if(!('email' in req.session))
+  {
+    res.sendstatus(500);
+    return;
+  }
+  else
+  {
+  email = req.session.email;
+  req.pool.getConnection( function(err,connection) {
+         if (err) {
+           res.sendStatus(500);
+           return;
+         }
+         var query = "SELECT * FROM users WHERE email = '"+email+"';";
+         connection.query(query, function(err, rows, fields) {
+         connection.release(); // release connection
+
+       //   if (err)
+       //   {
+       //     res.send('1');
+       //   }
+           res.json(rows[0]);
+         });
+     });
+  }
+});
+
+function loadProfile()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.response);
+      var obj = JSON.parse(this.response);
+      console.log(obj);
+      document.getElementsByName("profile-email")[0].value= obj.email;
+      document.getElementsByName("profile-password")[0].value= obj.password;
+      document.getElementsByName("profile-first")[0].value= obj.first_name;
+      document.getElementsByName("profile-last")[0].value= obj.last_name;
+        //alert("Add Successful");
+    }
+  };
+  xhttp.open("GET", "/profile");
+  xhttp.send();
+}
